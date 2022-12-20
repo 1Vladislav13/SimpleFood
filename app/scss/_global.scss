@@ -1,0 +1,201 @@
+body {
+  @extend %rubic-400;
+  color: $dark;
+  background-color: $silver-100;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.section {
+  padding-bottom: 120px;
+}
+
+.title {
+  text-align: center;
+  color: $darkBlue-900;
+  font-size: 36px;
+  line-height: 130%;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 12px 32px;
+  color: $white;
+  background-color: $orange-900;
+  border-radius: 6px
+}
+
+.more {
+  text-decoration-line: underline;
+}
+
+.category__item {
+  max-width: 210px;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $silver-200;
+  border-radius: 5px;
+}
+
+.category__img {
+  margin: 0 auto 10px;
+}
+
+.category__name {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 120%;
+}
+
+.category__price {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+.logo,
+.more,
+.btn,
+.btn svg path,
+.header-menu__link,
+.header__user svg path,
+.header__user svg ellipse,
+.header__user span,
+.header__user,
+.category__btn,
+.category__btn svg path,
+.category__type--active .category__btn svg path,
+.category__item,
+.footer-form__field,
+.footer__adress-link,
+.footer__social-link,
+.footer__social-link svg path,
+.footer__social-link svg,
+.footer__link {
+  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s, opacity 0.3s, text-shadow 0.3s,fill 0.3s, stroke 0.3s;
+}
+
+
+.logo:focus,
+.header-menu__link:focus,
+.more:focus,
+.footer__link:focus,
+.footer-form__field:focus,
+.footer__adress-link:focus,
+.category__item:hover {
+  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  border-radius: 5px;
+}
+
+.btn:focus,
+.category__btn:focus,
+.header__user:focus {
+  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  border-radius: 5px;
+  background-color: rgba(255, 122, 80, 0.1);
+}
+
+.footer__social-link:focus {
+  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  border-radius: 50%;
+  background-color: rgba(255, 122, 80, 0.1);
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.btn:focus,
+.more:hover,
+.header-menu__link:hover,
+.footer__link:hover,
+.footer__adress-link:hover {
+  color: $orange-900;
+}
+
+.header__user:hover {
+  background-color: $orange-900;
+  border-radius: 5px;
+}
+
+.header__user:hover span {
+  background-color: $white;
+  color: $orange-900;
+}
+
+.header__user:hover svg path,
+.header__user:hover svg ellipse {
+  stroke: $white;
+}
+
+.category__btn:hover {
+  color: $orange-900;
+  background-color: rgba(255, 122, 80, 0.1);
+}
+
+.category__btn:active {
+  box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+}
+
+.category__type--active:hover .category__btn svg path,
+.footer__social-link:hover svg path {
+  fill: $white;
+}
+
+.btn:hover {
+  color: $orange-900;
+  background-color: $white;
+  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+}
+
+.category__btn:hover svg path,
+.btn:hover svg path,
+.btn:active svg path,
+.btn:focus svg path,
+.footer__social-link:active svg path {
+  fill: $orange-900;
+}
+
+.footer__social-link:hover {
+  background-color: $orange-900;
+}
+
+.logo:active {
+  opacity: 0.5;
+}
+
+.more:active,
+.header-menu__link:active,
+.footer__link:active,
+.footer__adress-link:active {
+  text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+}
+
+.header__user:active,
+.btn:active,
+.footer__social-link:active {
+  background-color: $active;
+  color: $orange-900;
+}
+
+.header__user:active svg path,
+.header__user:active svg ellipse {
+  stroke: black;
+}
+
+.header__user:active span {
+  background-color: $orange-900;
+  color: $white;
+}
