@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cимпл Фуд</title>
+  <title> Сервис доставки еды Cимпл Фуд</title>
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -19,80 +19,84 @@
 <body>
 
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <nav class="header-menu">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип симплфуд">
+          <img class="logo__img" src="./images/logo.svg" width="200" height="39" alt="логотип симплфуд">
         </a>
-        <div class="header-menu__inner">
-          <ul class="header-menu__list">
-            <li class="header-menu__item">
-              <a class="header-menu__link header-menu__link--active" href="#">Главная</a>
-            </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Блюда</a>
-            </li>
-            <li class="header-menu__item">
-              <a class="header-menu__link" href="#">Контакты</a>
-            </li>
-          </ul>
-          <a class="header__user header__user--search" href="#">
-            <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="9.76663" cy="10.6301" rx="8.98856" ry="8.88424" stroke="#363853" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M16.0184 17.2708L19.5424 20.7448" stroke="#363853" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-            <span class="sr-only">открыть поиск</span>
-          </a>
-          <a class="header__user header__user--cart" href="#">
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1 1.17578L3.08 1.5316L4.04301 12.8715C4.12001 13.7976 4.90301 14.5082 5.84301 14.5053H16.752C17.649 14.5072 18.41 13.8549 18.537 12.9772L19.486 6.49532C19.592 5.77083 19.083 5.09872 18.351 4.99395C18.287 4.98505 3.414 4.98011 3.414 4.98011"
-                stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M12.375 8.63337H15.1479" stroke="#363853" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M5.4043 17.9316C5.70527 17.9316 5.94824 18.1729 5.94824 18.4696C5.94824 18.7673 5.70527 19.0085 5.4043 19.0085C5.10333 19.0085 4.86035 18.7673 4.86035 18.4696C4.86035 18.1729 5.10333 17.9316 5.4043 17.9316Z"
-                stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M16.6846 17.9316C16.9856 17.9316 17.2296 18.1729 17.2296 18.4696C17.2296 18.7673 16.9856 19.0085 16.6846 19.0085C16.3836 19.0085 16.1406 18.7673 16.1406 18.4696C16.1406 18.1729 16.3836 17.9316 16.6846 17.9316Z"
-                stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <span>4</span>
-            <span class="sr-only">открыть карзину</span>
-          </a>
-        </div>
+        <ul class="header-menu__list">
+          <li class="header-menu__item">
+            <a class="header-menu__link current" href="#">Главная</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="#">Блюда</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
       </nav>
+      <div class="header__user-nav">
+        <button class="header__btn" type="button">
+          <svg class="header__btn-icon" width="21" height="22" fill="none">
+            <ellipse cx="9.76663" cy="10.6301" rx="8.98856" ry="8.88424" stroke="#363853" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16.0184 17.2708L19.5424 20.7448" stroke="#363853" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span class="sr-only">открыть поиск</span>
+        </button>
+        <button class="header__btn" type="button">
+          <svg class="header__btn-icon" width="21" height="20" fill="none">
+            <path
+              d="M1 1.17578L3.08 1.5316L4.04301 12.8715C4.12001 13.7976 4.90301 14.5082 5.84301 14.5053H16.752C17.649 14.5072 18.41 13.8549 18.537 12.9772L19.486 6.49532C19.592 5.77083 19.083 5.09872 18.351 4.99395C18.287 4.98505 3.414 4.98011 3.414 4.98011"
+              stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.375 8.63337H15.1479" stroke="#363853" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.4043 17.9316C5.70527 17.9316 5.94824 18.1729 5.94824 18.4696C5.94824 18.7673 5.70527 19.0085 5.4043 19.0085C5.10333 19.0085 4.86035 18.7673 4.86035 18.4696C4.86035 18.1729 5.10333 17.9316 5.4043 17.9316Z"
+              stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16.6846 17.9316C16.9856 17.9316 17.2296 18.1729 17.2296 18.4696C17.2296 18.7673 16.9856 19.0085 16.6846 19.0085C16.3836 19.0085 16.1406 18.7673 16.1406 18.4696C16.1406 18.1729 16.3836 17.9316 16.6846 17.9316Z"
+              stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="header__btn-quantity">4</span>
+          <span class="sr-only">открыть карзину</span>
+        </button>
+      </div>
+    </div>
+
     </div>
   </header>
 
   <main>
     <section class="hero section">
-      <div class="container">
-        <div class="hero__inner">
-          <div class="hero__info">
-            <h1 class="hero__title">доставка
-              <span class="hero__subtitle">за 15 минут</span>
-            </h1>
-            <p class="hero__text">
-              Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-            </p>
-            <a class="hero__link-order btn" href="#">Заказать</a>
-            <a class="more" href="#">Подробнее</a>
+      <div class="container hero__container">
+        <div class="hero__info">
+          <h1 class="sr-only"></h1>
+          <h2 class="hero__title">
+            доставка
+            <span class="hero__subtitle">за 15 минут</span>
+          </h2>
+          <p class="hero__text">
+            Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+          </p>
+          <div class="hero__box">
+            <a class="hero__link-order btn--middle" href="#">Заказать</a>
+            <a class="hero__link" href="#">Подробнее</a>
           </div>
-          <img class="hero__img" src="images/hero-img.png" alt="курьер на скутере" width="560" height="660">
         </div>
+        <div class="hero__img"></div>
       </div>
     </section>
 
-    <article class="category section">
+    <section class="category section">
       <div class="container">
         <h2 class="category__title title">Популярные категории</h2>
         <ul class="category__items">
-          <li class="category__type category__type--active">
-            <button class="category__btn" type="button" data-filter=".category-a">
-              <svg width="44" height="44" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="category__box">
+            <button class="category__btn btn--big" type="button" data-filter=".category-a">
+              <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <path
                   d="M44 19.3359C44 17.6467 42.9108 16.2079 41.3982 15.6825C41.1658 10.4417 39.2092 6.41987 35.573 3.71723C32.2543 1.25065 27.6878 0 22 0C16.3122 0 11.7457 1.25065 8.42703 3.71731C4.79084 6.41987 2.83422 10.4418 2.60176 15.6826C1.08917 16.2079 0 17.6467 0 19.3359C0 20.3257 0.374172 21.2293 0.987852 21.9141C0.374172 22.5988 0 23.5024 0 24.4922C0 26.1918 1.10258 27.6378 2.6296 28.1551C3.18252 34.0454 8.18967 38.6719 14.2656 38.6719H29.7344C35.8103 38.6719 40.8175 34.0454 41.3704 28.1551C42.8974 27.6378 44 26.1918 44 24.4922C44 23.5024 43.6258 22.5988 43.0121 21.9141C43.6258 21.2293 44 20.3257 44 19.3359ZM22 2.57812C29.3933 2.57812 38.1513 4.85719 38.8034 15.4688H5.19655C5.84873 4.85719 14.6067 2.57812 22 2.57812ZM3.86719 18.0469H40.1328C40.8436 18.0469 41.4219 18.6251 41.4219 19.3359C41.4219 20.0467 40.8436 20.625 40.1328 20.625H3.86719C3.1564 20.625 2.57812 20.0467 2.57812 19.3359C2.57812 18.6251 3.1564 18.0469 3.86719 18.0469ZM29.7344 36.0938H14.2656C9.68456 36.0938 5.88302 32.7265 5.24958 28.3594H6.44531C7.30709 28.3594 7.57943 28.6525 8.12187 29.2366C8.78857 29.9545 9.70166 30.9375 11.6875 30.9375C13.6874 30.9375 14.5766 29.9444 15.226 29.2193C15.7387 28.6468 15.996 28.3594 16.8438 28.3594C17.6915 28.3594 17.9488 28.6468 18.4615 29.2193C19.1109 29.9444 20.0001 30.9375 22 30.9375C23.9999 30.9375 24.8891 29.9444 25.5385 29.2193C26.0512 28.6468 26.3085 28.3594 27.1562 28.3594C28.004 28.3594 28.2613 28.6468 28.774 29.2193C29.4234 29.9444 30.3126 30.9375 32.3125 30.9375C34.3124 30.9375 35.2016 29.9444 35.851 29.2193C36.3637 28.6468 36.621 28.3594 37.4688 28.3594H38.7504C38.117 32.7265 34.3154 36.0938 29.7344 36.0938ZM40.1328 25.7812H37.4688C35.4689 25.7812 34.5796 26.7743 33.9303 27.4995C33.4176 28.072 33.1603 28.3594 32.3125 28.3594C31.4647 28.3594 31.2074 28.072 30.6947 27.4995C30.0454 26.7743 29.1561 25.7812 27.1562 25.7812C25.1564 25.7812 24.2671 26.7743 23.6178 27.4995C23.1051 28.072 22.8478 28.3594 22 28.3594C21.1522 28.3594 20.8949 28.072 20.3822 27.4995C19.7329 26.7743 18.8436 25.7812 16.8438 25.7812C14.8439 25.7812 13.9546 26.7743 13.3053 27.4995C12.7926 28.072 12.5353 28.3594 11.6875 28.3594C10.8257 28.3594 10.5534 28.0662 10.0109 27.4821C9.34424 26.7643 8.43116 25.7812 6.44531 25.7812H3.86719C3.1564 25.7812 2.57812 25.203 2.57812 24.4922C2.57812 23.7814 3.1564 23.2031 3.86719 23.2031H40.1328C40.8436 23.2031 41.4219 23.7814 41.4219 24.4922C41.4219 25.203 40.8436 25.7812 40.1328 25.7812Z"
                   fill="black" />
@@ -112,9 +116,9 @@
               Бургеры
             </button>
           </li>
-          <li class="category__type">
-            <button class="category__btn" type="button" data-filter=".category-b">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="category__box">
+            <button class="category__btn btn--big" type="button" data-filter=".category-b">
+              <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_783)">
                   <path
                     d="M43.7452 43.7521C43.5104 43.9838 43.1633 44.0611 42.8528 43.9499L7.15852 31.2228C5.91845 31.9811 4.34553 32.1587 2.9029 31.5613C0.50826 30.5694 -0.633074 27.8141 0.358815 25.4193C2.69794 19.7725 6.07519 14.718 10.3971 10.3961C14.7189 6.07421 19.7734 2.69688 25.4203 0.357838C26.0067 0.114979 26.6146 -3.8147e-06 27.213 -3.8147e-06C29.0585 8.01086e-05 30.8133 1.09364 31.5622 2.90201C32.0662 4.11871 32.0186 5.42823 31.5365 6.55263L43.9546 42.8624C44.0613 43.1745 43.98 43.5203 43.7452 43.7521ZM12.5631 31.3252L16.3461 32.6739C16.7902 32.2007 17.0067 31.5493 16.92 30.8905C16.8435 30.3104 16.5458 29.7947 16.0817 29.4385C15.6175 29.0823 15.0428 28.9284 14.4622 29.0046C13.8823 29.081 13.3666 29.3786 13.0104 29.8429C12.6822 30.2706 12.5261 30.7924 12.5631 31.3252ZM29.9743 3.55986C29.345 2.04066 27.5969 1.31664 26.0781 1.94605C15.0746 6.50373 6.50471 15.0737 1.94685 26.0772C1.64203 26.813 1.64203 27.6235 1.94685 28.3595C2.25167 29.0954 2.82479 29.6685 3.56067 29.9733C4.29655 30.2781 5.10711 30.2781 5.84299 29.9733C6.57887 29.6685 7.15199 29.0954 7.45681 28.3595C9.40767 23.6495 12.2247 19.4336 15.8296 15.8287C19.4345 12.2238 23.6504 9.40687 28.3604 7.45592C29.8796 6.82677 30.6036 5.07889 29.9743 3.55986ZM37.6092 29.6202C37.5314 29.6221 37.4536 29.6265 37.3759 29.6367C36.7959 29.7131 36.2803 30.0108 35.9242 30.4749C35.5679 30.9391 35.4139 31.5142 35.4902 32.0942C35.6479 33.2917 36.75 34.1375 37.9479 33.98C38.3174 33.9314 38.6644 33.7881 38.9602 33.57L37.6092 29.6202ZM39.5315 35.241C39.1128 35.469 38.6527 35.6208 38.1722 35.6841C36.0348 35.9662 34.0675 34.4557 33.7861 32.3185C33.6498 31.2833 33.9248 30.257 34.5605 29.4285C35.1728 28.6306 36.0494 28.1093 37.0382 27.9503L35.3301 22.9557L33.3657 24.4631C32.9892 24.7518 32.4496 24.681 32.1608 24.3044C31.8719 23.9279 31.9429 23.3884 32.3194 23.0995L34.7433 21.2397L30.3008 8.24981C29.9282 8.57379 29.4991 8.84484 29.0185 9.04396C19.9108 12.8165 12.8176 19.9098 9.04519 29.0173C8.91405 29.334 8.75111 29.6281 8.56317 29.899L10.8645 30.7195C10.9448 30.0262 11.211 29.3648 11.6469 28.7967C12.2825 27.9682 13.2028 27.437 14.238 27.3007C14.4115 27.2779 14.5844 27.2665 14.7564 27.2665C15.6113 27.2665 16.4384 27.5458 17.128 28.075C17.9565 28.7107 18.4877 29.6308 18.6241 30.6662C18.7464 31.5956 18.5295 32.5162 18.0425 33.2788L28.7251 37.0877L29.1299 36.1103C29.2671 35.7793 29.587 35.5795 29.9243 35.5795C30.0338 35.5795 30.1452 35.6007 30.2528 35.6452C30.6913 35.8268 30.8995 36.3296 30.7179 36.768L30.3461 37.6656L41.7516 41.7324L39.5315 35.241Z"
@@ -147,9 +151,9 @@
               Пицца
             </button>
           </li>
-          <li class="category__type">
-            <button class="category__btn" type="button" data-filter=".category-c">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="category__box">
+            <button class="category__btn btn--big" type="button" data-filter=".category-c">
+              <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_805)">
                   <path
                     d="M41.8 6.60001H40.3333V5.13332C40.3333 3.91833 39.3483 2.93332 38.1333 2.93332H36.3865L35.3254 0.81109C35.0787 0.312481 34.5697 -0.00222256 34.0135 1.18199e-05H33C32.19 1.18199e-05 31.5333 0.65666 31.5333 1.46671V2.9334H23.4666C22.2515 2.9334 21.2666 3.91833 21.2666 5.1334V6.60001H19.8C18.585 6.60001 17.6 7.58503 17.6 8.80001V10.2667C17.6 11.0768 18.2567 11.7334 19.0667 11.7334H19.1445L20.0025 19.3102L16.4692 18.48C16.291 18.2058 16.1025 17.9337 15.8929 17.6667L14.6462 12.3009C14.5692 11.9691 14.274 11.7341 13.9334 11.7333H9.71962C7.73154 9.98139 5.38193 9.18939 3.60947 9.71078L2.53293 8.53747C2.1261 8.09335 1.48698 7.94734 0.9277 8.17078C0.367474 8.38665 -0.00154203 8.92565 4.84458e-06 9.52601V41.8147C0.00163766 43.0209 0.979091 43.9984 2.18531 44H38.1333C38.5061 43.9998 38.8193 43.7199 38.8615 43.3496L42.4542 11.7333H42.5334C43.3434 11.7333 44.0001 11.0767 44.0001 10.2666V8.80001C44 7.58503 43.0151 6.60001 41.8 6.60001ZM33 1.46671H34.0135L34.7468 2.9334H33V1.46671ZM22.7333 5.13332C22.7333 4.72829 23.0617 4.40001 23.4666 4.40001H38.1333C38.5383 4.40001 38.8666 4.72829 38.8666 5.13332V6.60001H22.7333V5.13332ZM20.68 20.9733L20.7262 20.9821L21.3188 21.1228L21.7162 25.2845C20.5645 24.4692 19.1864 24.0348 17.7753 24.0422C18.047 22.7484 17.9032 21.4018 17.3646 20.1945L20.68 20.9733ZM22.1129 27.4597L22.1225 27.4678C22.3881 27.7136 22.6403 27.9735 22.8778 28.2466C23.7502 29.2201 24.3917 30.3779 24.7544 31.6338C24.8783 32.0712 24.9422 32.5234 24.9443 32.978L18.095 25.5082C19.6184 25.6788 21.037 26.3678 22.1129 27.4597ZM14.3851 18.1398V18.1383C15.9676 19.957 16.7046 22.1416 16.3549 23.6097L8.8917 15.4734C10.3972 15.1368 12.6867 16.1942 14.3851 18.1398ZM13.3467 13.2L13.9334 15.697C13.344 15.2372 12.7017 14.8497 12.0202 14.5428C11.7429 14.0739 11.433 13.6252 11.0925 13.2H13.3467ZM9.66024 13.7456H9.66316C9.724 13.8153 9.77393 13.8923 9.83254 13.9656C9.1441 13.9022 8.45093 14.0187 7.821 14.3037L4.80623 11.0162C6.28032 11.0374 8.20386 12.0743 9.66024 13.7456ZM30.7371 42.1026C30.6236 42.3638 30.3661 42.5329 30.0813 42.5334H23.4666H2.18531C1.78836 42.5334 1.46661 42.2117 1.46661 41.8147L1.45338 9.5334L16.1722 25.5816V25.5853L24.8167 35.0094L24.8262 35.0204L29.568 40.1919C29.5848 40.2139 29.6025 40.2359 29.6215 40.2571L30.6049 41.3292C30.7988 41.5378 30.8506 41.8414 30.7371 42.1026ZM26.1976 34.3449C26.3319 33.907 26.4001 33.4514 26.4 32.9934C26.7853 33.3183 27.1442 33.6732 27.4736 34.0546C27.8833 34.5227 28.247 35.029 28.5597 35.5667C28.9879 36.2868 29.2907 37.0743 29.4551 37.8958L26.1976 34.3449ZM37.4785 42.5334H32.1362C32.4108 41.7735 32.2366 40.9239 31.6852 40.3334L30.9467 39.5267C31.0916 38.2991 30.8936 37.0553 30.3747 35.9334H38.2287L37.4785 42.5334ZM38.3952 34.4667H29.5952C29.2941 33.9837 28.9568 33.5243 28.5861 33.0924C27.8644 32.2547 27.0171 31.5341 26.0744 30.9562C25.6435 29.5975 24.9311 28.3449 23.9837 27.2799C23.7637 27.0306 23.5437 26.7982 23.3127 26.5745L22.7334 20.4636C22.7036 20.151 22.478 19.8921 22.1724 19.8198L21.5226 19.6658L21.3686 18.3333H40.2292L38.3952 34.4667ZM40.3957 16.8667H21.2022L20.6214 11.7334H40.9787L40.3957 16.8667ZM42.5333 10.2667H19.0667V8.80001C19.0667 8.39499 19.395 8.06671 19.8 8.06671H41.8C42.205 8.06671 42.5333 8.39499 42.5333 8.80001V10.2667Z"
@@ -185,9 +189,9 @@
               Сендвичи
             </button>
           </li>
-          <li class="category__type">
-            <button class="category__btn" type="button" data-filter=".category-d">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="category__box">
+            <button class="category__btn btn--big" type="button" data-filter=".category-d">
+              <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_828)">
                   <g clip-path="url(#clip1_21_828)">
                     <path
@@ -228,9 +232,9 @@
               Азиатская кухня
             </button>
           </li>
-          <li class="category__type">
-            <button class="category__btn" type="button" data-filter=".category-b">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="category__box">
+            <button class="category__btn btn--big" type="button" data-filter=".category-e">
+              <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_840)">
                   <path
                     d="M31.1579 14.6573L30.6871 13.1257C30.089 11.386 28.1773 10.4548 26.4172 11.0459C25.427 11.3784 24.6494 12.147 24.3129 13.1257L23.8421 14.6573C23.446 15.9489 23.3628 17.3146 23.5994 18.6438C23.8152 19.7629 24.534 20.7244 25.553 21.2568L25.0257 32.9069C24.9552 33.5571 25.1686 34.2063 25.6124 34.6914C26.5669 35.7233 28.1872 35.7951 29.2313 34.8516C29.2878 34.8006 29.3419 34.7472 29.3935 34.6914C29.8274 34.2201 30.0405 33.5899 29.9801 32.9554L29.4499 21.2553C30.4675 20.7227 31.1852 19.7618 31.4006 18.6438C31.6372 17.3146 31.5541 15.9489 31.1579 14.6573ZM29.9559 18.3916C29.7972 19.1956 29.2175 19.8552 28.4343 20.1232C28.137 20.2336 27.9455 20.5206 27.9598 20.8342L28.5171 33.0699C28.5428 33.3099 28.4627 33.5492 28.2971 33.7266C27.8556 34.1587 27.1444 34.1587 26.7029 33.7266C26.5291 33.5349 26.4502 33.2769 26.4873 33.0221L27.0402 20.8342C27.0545 20.5206 26.863 20.2336 26.5657 20.1232C25.7825 19.8552 25.2028 19.1956 25.0441 18.3916C24.8479 17.288 24.917 16.1543 25.2457 15.082L25.7165 13.5497C26.0808 12.5762 27.1746 12.0789 28.1596 12.4389C28.6804 12.6293 29.0909 13.0351 29.2835 13.5497L29.7543 15.082C30.0826 16.1544 30.1517 17.288 29.9559 18.3916Z"
@@ -273,93 +277,186 @@
             </button>
           </li>
         </ul>
-        <ul class="category__list">
+        <ul class="category__products">
+
           <li class="category__item mix category-a category-b category-c">
-            <img class="category__img" src="images/burgers/cheeseburger-salat.jpg" wight="140" height="140" alt="чизбургер">
-            <span class="category__name">Чизбургер с листьями салата</span>
-            <span class="category__price">160 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/cheeseburger-salat.jpg" wight="140" height="140"
+                  alt="Чизбургер с листьями салата">
+                <span class="product-card__name">Чизбургер с листьями салата</span>
+                <span class="product-card__price">
+                  160
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
+
           <li class="category__item mix category-b category-d category-a">
-            <img class="category__img" src="images/burgers/bifbuerger.jpg" wight="140" height="140" alt="Бифбургер">
-            <span class="category__name">Бифбургер</span>
-            <span class="category__price">190 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" wight="140" height="140"
+                  alt="Бифproduct-бургер">
+                <span class="product-card__name">Бифбургер</span>
+                <span class="product-card__price">
+                  190
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
+
           <li class="category__item mix category-c category-d category-a">
-            <img class="category__img" src="images/burgers/cheeseburger-king.jpg" wight="140" height="140" alt="чизбургер-кинг">
-            <span class="category__name">Королевский чизбургер</span>
-            <span class="category__price">260 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/cheeseburger-king.jpg" wight="140" height="140"
+                  alt="Королевский чизбургерг">
+                <span class="product-card__name">Королевский чизбургер</span>
+                <span class="product-card__price">
+                  260
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-d category-b category-a">
-            <img class="category__img" src="images/burgers/black-hamburger.jpg" wight="140" height="140" alt="чёрный гамбургер">
-            <span class="category__name">Черный гамбургер</span>
-            <span class="category__price">199 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+
+          <li class="category__item mix category-d category-e category-a">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/black-hamburger.jpg" wight="140" height="140"
+                  alt="чёрный гамбургер">
+                <span class="product-card__name">Черный гамбургер</span>
+                <span class="product-card__price">
+                  199
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-a category-b category-d">
-            <img class="category__img" src="images/burgers/chiken-burger.jpg" wight="140" height="140" alt="Чикен-бургер">
-            <span class="category__name">Чикен бургер</span>
-            <span class="category__price">180 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+
+          <li class="category__item mix category-a category-b category-e">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/chiken-burger.jpg" wight="140" height="140"
+                  alt="Чикен-бургер">
+                <span class="product-card__name">Чикен бургер</span>
+                <span class="product-card__price">
+                  180
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-b category-c category-a">
-            <img class="category__img" src="images/burgers/cheeseburger-salat.jpg" wight="140" height="140" alt="чизбургер">
-            <span class="category__name">Чизбургер с листьями салата</span>
-            <span class="category__price">160 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+
+          <li class="category__item mix category-a category-b category-c">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/cheeseburger-salat.jpg" wight="140" height="140"
+                  alt="Чизбургер с листьями салата">
+                <span class="product-card__name">Чизбургер с листьями салата</span>
+                <span class="product-card__price">
+                  160
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-d category-b category-a">
-            <img class="category__img" src="images/burgers/bifbuerger.jpg" wight="140" height="140" alt="Бифбургер">
-            <span class="category__name">Бифбургер</span>
-            <span class="category__price">190 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+          
+          <li class="category__item mix category-b category-d category-a">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" wight="140" height="140"
+                  alt="Бифproduct-бургер">
+                <span class="product-card__name">Бифбургер</span>
+                <span class="product-card__price">
+                  190
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-b category-c category-a">
-            <img class="category__img" src="images/burgers/cheeseburger-king.jpg" wight="140" height="140" alt="чизбургер-кинг">
-            <span class="category__name">Королевский чизбургер</span>
-            <span class="category__price">260 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+          
+          <li class="category__item mix category-c category-d category-a">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/cheeseburger-king.jpg" wight="140" height="140"
+                  alt="Королевский чизбургерг">
+                <span class="product-card__name">Королевский чизбургер</span>
+                <span class="product-card__price">
+                  260
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-a category-d category-b">
-            <img class="category__img" src="images/burgers/black-hamburger.jpg" wight="140" height="140" alt="Черный гамбургер">
-            <span class="category__name">Черный гамбургер</span>
-            <span class="category__price">199 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+          
+          <li class="category__item mix category-d category-e category-a">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/black-hamburger.jpg" wight="140" height="140"
+                  alt="чёрный гамбургер">
+                <span class="product-card__name">Черный гамбургер</span>
+                <span class="product-card__price">
+                  199
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
-          <li class="category__item mix category-d category-a category-c">
-            <img class="category__img" src="images/burgers/chiken-burger.jpg" wight="140" height="140" alt="Чикен-бургер">
-            <span class="category__name">Чикен бургер</span>
-            <span class="category__price">180 грн.</span>
-            <a class="category__link btn" href="#">В корзину</a>
+          
+          <li class="category__item mix category-a category-b category-e">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/burgers/chiken-burger.jpg" wight="140" height="140"
+                  alt="Чикен-бургер">
+                <span class="product-card__name">Чикен бургер</span>
+                <span class="product-card__price">
+                  180
+                  <span class="currency">грн.</span>
+                </span>
+                <button class="product-card__btn btn" href="#">В корзину</button>
+              </a>
+            </article>
           </li>
+
         </ul>
-        <a class="category__link-more more" href="№">Показать ещё</a>
+        <a class="category__link-more" href="№">Показать ещё</a>
       </div>
-    </article>
+    </section>
 
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <form class="footer-form">
-          <a class="footer-form__logo logo" href="#">
-            <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип симплфуд">
+        <div class="footer__box">
+          <a class="logo footer__logo" href="#">
+            <img class="logo__img" src="./images/logo.svg" width="200" height="39" alt="логотип симплфуд">
           </a>
-          <label class="footer-form__label">
-            <input class="footer-form__field" type="email" name="userEmail" placeholder="Ваш email" required>
-          </label>
-          <button class="footer-form__btn btn" type="submit">
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.318 14.3001C10.0587 14.3001 9.81931 14.1616 9.70237 13.9406L7.66079 10.0822C7.54867 9.87034 7.56793 9.61684 7.71031 9.42119L11.0059 5.20009L6.53819 8.31359C6.33115 8.44879 6.06288 8.46569 5.83864 8.36039L1.75616 6.43184C1.51128 6.31549 1.36202 6.07304 1.37715 5.81434C1.3916 5.55564 1.56838 5.32944 1.82564 5.24039L14.8951 0.690388C15.1461 0.603938 15.4288 0.660488 15.6194 0.840538C15.8092 1.01929 15.8711 1.28709 15.7783 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3435 14.2994 10.3304 14.3001 10.318 14.3001Z"
-                fill="white" />
-            </svg>
-            Подписаться
-          </button>
-        </form>
+          <form class="footer-form">
+            <label class="footer-form__label">
+              <input class="footer-form__field" type="email" name="userEmail" placeholder="Ваш email" required>
+            </label>
+            <button class="footer-form__btn btn--long" type="submit">
+              <svg width="17" height="16" fill="none">
+                <path
+                  d="M10.318 14.3001C10.0587 14.3001 9.81931 14.1616 9.70237 13.9406L7.66079 10.0822C7.54867 9.87034 7.56793 9.61684 7.71031 9.42119L11.0059 5.20009L6.53819 8.31359C6.33115 8.44879 6.06288 8.46569 5.83864 8.36039L1.75616 6.43184C1.51128 6.31549 1.36202 6.07304 1.37715 5.81434C1.3916 5.55564 1.56838 5.32944 1.82564 5.24039L14.8951 0.690388C15.1461 0.603938 15.4288 0.660488 15.6194 0.840538C15.8092 1.01929 15.8711 1.28709 15.7783 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3435 14.2994 10.3304 14.3001 10.318 14.3001Z"
+                  fill="white" />
+              </svg>
+              Подписаться
+            </button>
+          </form>
+        </div>
         <ul class="footer__list">
           <li class="footer__item">
             <a class="footer__link" href="#">Как это работает</a>
@@ -401,20 +498,48 @@
 
         <address class="footer__address">
           <ul class="footer__items">
-            <li class="footer__adress-item footer__adress-item--location">
-              <a class="footer__adress-link" href="#">ул. Т.Г.Шевченко, 1</a>
+            <li class="footer__adress-item">
+              <a class="footer__adress-link" href="#">
+                <svg class="footer__adress-item--icon" width="24" height="24" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
+                    stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z"
+                    stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                ул. Т.Г.Шевченко, 1</a>
             </li>
-            <li class="footer__adress-item footer__adress-item--phone">
-              <a class="footer__adress-link" href="tel:+380501112233">380501112233</a>
+            <li class="footer__adress-item">
+              <a class="footer__adress-link" href="tel:+380501112233">
+                <svg class="footer__adress-item--icon" width="24" height="24" fill="none">
+                  <path d="M14.353 2.5C18.054 2.911 20.978 5.831 21.393 9.532" stroke="#31352B" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M14.353 6.04297C16.124 6.38697 17.508 7.77197 17.853 9.54297" stroke="#31352B"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.0315 12.4724C15.0205 16.4604 15.9254 11.8467 18.4653 14.3848C20.9138 16.8328 22.3222 17.3232 19.2188 20.4247C18.8302 20.737 16.3613 24.4943 7.68447 15.8197C-0.993406 7.144 2.76157 4.67244 3.07394 4.28395C6.18377 1.17385 6.66682 2.58938 9.11539 5.03733C11.6541 7.5765 7.04254 8.48441 11.0315 12.4724Z"
+                    stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                380501112233</a>
             </li>
-            <li class="footer__adress-item footer__adress-item--mail">
-              <a class="footer__adress-link" href="mailto:support@sfood.com">support@sfood.com</a>
+            <li class="footer__adress-item">
+              <a class="footer__adress-link" href="mailto:support@sfood.com">
+                <svg class="footer__adress-item--icon" width="24" height="24" fill="none">
+                  <path
+                    d="M17.9026 8.85107L13.4593 12.4641C12.6198 13.1301 11.4387 13.1301 10.5992 12.4641L6.11844 8.85107"
+                    stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z"
+                    stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                support@sfood.com</a>
             </li>
           </ul>
           <ul class="footer__social">
-            <li class="footer__social-item ">
-              <a class="footer__social-link footer__social-link--fb" href="#">
-                <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__social-link--icon" width="10" height="21" fill="none">
                   <path
                     d="M2.54678 20.5263V10.8948H0V7.42695H2.54678V4.46499C2.54678 2.13745 4.05118 0 7.51762 0C8.92113 0 9.95896 0.13455 9.95896 0.13455L9.87718 3.3729C9.87718 3.3729 8.81876 3.3626 7.66377 3.3626C6.41371 3.3626 6.21344 3.93867 6.21344 4.89481V7.42695H9.97655L9.81281 10.8948H6.21344V20.5263H2.54678Z"
                     fill="black" />
@@ -424,7 +549,7 @@
             </li>
             <li class="footer__social-item">
               <a class="footer__social-link" href="#">
-                <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="footer__social-link--icon" width="21" height="17" fill="none">
                   <path
                     d="M20.5263 1.98086C19.7715 2.30648 18.95 2.54082 18.1039 2.6321C18.9824 2.11021 19.6402 1.28571 19.954 0.313295C19.1297 0.80367 18.2266 1.14753 17.2849 1.32962C16.8913 0.908848 16.4153 0.573641 15.8865 0.344888C15.3577 0.116135 14.7874 -0.00126247 14.2113 1.02382e-05C11.8802 1.02382e-05 10.0054 1.88959 10.0054 4.20839C10.0054 4.534 10.0448 4.85962 10.109 5.17291C6.61845 4.99036 3.50534 3.3228 1.43568 0.769655C1.05857 1.41378 0.86095 2.14718 0.863383 2.89358C0.863383 4.35393 1.60589 5.6416 2.73816 6.39891C2.0709 6.37263 1.41926 6.18923 0.836248 5.86362V5.91542C0.836248 7.9604 2.2818 9.6551 4.20838 10.0449C3.84664 10.1388 3.47452 10.1869 3.10078 10.1879C2.82696 10.1879 2.56795 10.1608 2.30647 10.1238C2.8393 11.7914 4.39092 13.0026 6.23856 13.042C4.79301 14.1743 2.98237 14.8403 1.01633 14.8403C0.663572 14.8403 0.337953 14.828 0 14.7885C1.86491 15.9849 4.07763 16.6756 6.46057 16.6756C14.1965 16.6756 18.4295 10.2669 18.4295 4.70422C18.4295 4.52167 18.4295 4.33913 18.4172 4.15658C19.2362 3.55715 19.954 2.81464 20.5263 1.98086Z"
                     fill="black" />
@@ -434,7 +559,7 @@
             </li>
             <li class="footer__social-item ">
               <a class="footer__social-link" href="#">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="footer__social-link--icon" width="20" height="20" fill="none">
                   <path
                     d="M9.74756 6.49862C7.95723 6.49862 6.49618 7.95967 6.49618 9.75C6.49618 11.5403 7.95723 13.0014 9.74756 13.0014C11.5379 13.0014 12.9989 11.5403 12.9989 9.75C12.9989 7.95967 11.5379 6.49862 9.74756 6.49862ZM19.4993 9.75C19.4993 8.40359 19.5115 7.06938 19.4359 5.72541C19.3602 4.16435 19.0041 2.77891 17.8626 1.63739C16.7186 0.493433 15.3356 0.139757 13.7746 0.0641433C12.4282 -0.0114703 11.094 0.00072551 9.75 0.00072551C8.40359 0.00072551 7.06938 -0.0114703 5.72541 0.0641433C4.16435 0.139757 2.77892 0.495872 1.63739 1.63739C0.493433 2.78135 0.139757 4.16435 0.0641433 5.72541C-0.0114703 7.07182 0.00072551 8.40603 0.00072551 9.75C0.00072551 11.094 -0.0114703 12.4306 0.0641433 13.7746C0.139757 15.3356 0.495873 16.7211 1.63739 17.8626C2.78135 19.0066 4.16435 19.3602 5.72541 19.4359C7.07182 19.5115 8.40603 19.4993 9.75 19.4993C11.0964 19.4993 12.4306 19.5115 13.7746 19.4359C15.3356 19.3602 16.7211 19.0041 17.8626 17.8626C19.0066 16.7186 19.3602 15.3356 19.4359 13.7746C19.5139 12.4306 19.4993 11.0964 19.4993 9.75ZM9.74756 14.7527C6.97913 14.7527 4.74487 12.5184 4.74487 9.75C4.74487 6.98157 6.97913 4.74731 9.74756 4.74731C12.516 4.74731 14.7503 6.98157 14.7503 9.75C14.7503 12.5184 12.516 14.7527 9.74756 14.7527ZM14.9551 5.71077C14.3088 5.71077 13.7868 5.18879 13.7868 4.54242C13.7868 3.89604 14.3088 3.37407 14.9551 3.37407C15.6015 3.37407 16.1235 3.89604 16.1235 4.54242C16.1237 4.6959 16.0936 4.84792 16.035 4.98976C15.9763 5.13159 15.8903 5.26047 15.7817 5.369C15.6732 5.47753 15.5443 5.56358 15.4025 5.62223C15.2606 5.68087 15.1086 5.71096 14.9551 5.71077Z"
                     fill="black" />
@@ -447,7 +572,7 @@
       </div>
     </div>
 
-    <span class="footer__text">© 2022 Simple Food</span>
+    <p class="footer__text">© 2022 Simple Food</p>
   </footer>
 
 

@@ -2,4 +2,4 @@ $(function () {
 
 });
 
-var mixer = mixitup('.category__list');
+var mixer = mixitup('.category__products');

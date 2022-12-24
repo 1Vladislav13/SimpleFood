@@ -1,0 +1,101 @@
+.header {
+  padding: 60px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__user-nav {
+    display: flex;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+    }
+
+    &-quantity {
+      position: absolute;
+      text-align: center;
+      background-color: $accent;
+      color: $white;
+      border-radius: 50%;
+      right: 4px;
+      top: 7px;
+      width: 14px;
+      height: 14px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+      background-color: rgba(255, 122, 80, 0.1);
+    }
+
+    &:active {
+      background-color: $active;
+      color: $accent;
+    }
+
+    &:hover {
+      background-color: $accent;
+      border-radius: 5px;
+    }
+
+    &:hover &-quantity {
+      background-color: $white;
+      color: $accent;
+    }
+  }
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 2;
+
+  &__list {
+    display: flex;
+    margin-right: 60px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+    }
+
+    &:hover {
+      color: $accent
+    }
+  }
+}
+
+.current {
+  color: $accent;
+}
