@@ -65,15 +65,13 @@
         </button>
       </div>
     </div>
-
-    </div>
   </header>
 
   <main>
     <section class="hero section">
       <div class="container hero__container">
+        <h1 class="sr-only">Сервис доставки еды</h1>
         <div class="hero__info">
-          <h1 class="sr-only"></h1>
           <h2 class="hero__title">
             доставка
             <span class="hero__subtitle">за 15 минут</span>
@@ -82,11 +80,11 @@
             Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
           </p>
           <div class="hero__box">
-            <a class="hero__link-order btn--middle" href="#">Заказать</a>
+            <a class="hero__link-order btn btn--middle" href="#">Заказать</a>
             <a class="hero__link" href="#">Подробнее</a>
           </div>
         </div>
-        <div class="hero__img" style="background-image: url(./images/hero-bg.png)"></div>
+        <!-- <div class="hero__img" style="background-image: url(./images/hero-bg.png)"></div> -->
       </div>
     </section>
 
@@ -95,7 +93,7 @@
         <h2 class="category__title title">Популярные категории</h2>
         <ul class="category__items">
           <li class="category__box">
-            <button class="category__btn btn--big" type="button" data-filter=".category-a">
+            <button class="category__btn" type="button" data-filter="all">
               <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <path
                   d="M44 19.3359C44 17.6467 42.9108 16.2079 41.3982 15.6825C41.1658 10.4417 39.2092 6.41987 35.573 3.71723C32.2543 1.25065 27.6878 0 22 0C16.3122 0 11.7457 1.25065 8.42703 3.71731C4.79084 6.41987 2.83422 10.4418 2.60176 15.6826C1.08917 16.2079 0 17.6467 0 19.3359C0 20.3257 0.374172 21.2293 0.987852 21.9141C0.374172 22.5988 0 23.5024 0 24.4922C0 26.1918 1.10258 27.6378 2.6296 28.1551C3.18252 34.0454 8.18967 38.6719 14.2656 38.6719H29.7344C35.8103 38.6719 40.8175 34.0454 41.3704 28.1551C42.8974 27.6378 44 26.1918 44 24.4922C44 23.5024 43.6258 22.5988 43.0121 21.9141C43.6258 21.2293 44 20.3257 44 19.3359ZM22 2.57812C29.3933 2.57812 38.1513 4.85719 38.8034 15.4688H5.19655C5.84873 4.85719 14.6067 2.57812 22 2.57812ZM3.86719 18.0469H40.1328C40.8436 18.0469 41.4219 18.6251 41.4219 19.3359C41.4219 20.0467 40.8436 20.625 40.1328 20.625H3.86719C3.1564 20.625 2.57812 20.0467 2.57812 19.3359C2.57812 18.6251 3.1564 18.0469 3.86719 18.0469ZM29.7344 36.0938H14.2656C9.68456 36.0938 5.88302 32.7265 5.24958 28.3594H6.44531C7.30709 28.3594 7.57943 28.6525 8.12187 29.2366C8.78857 29.9545 9.70166 30.9375 11.6875 30.9375C13.6874 30.9375 14.5766 29.9444 15.226 29.2193C15.7387 28.6468 15.996 28.3594 16.8438 28.3594C17.6915 28.3594 17.9488 28.6468 18.4615 29.2193C19.1109 29.9444 20.0001 30.9375 22 30.9375C23.9999 30.9375 24.8891 29.9444 25.5385 29.2193C26.0512 28.6468 26.3085 28.3594 27.1562 28.3594C28.004 28.3594 28.2613 28.6468 28.774 29.2193C29.4234 29.9444 30.3126 30.9375 32.3125 30.9375C34.3124 30.9375 35.2016 29.9444 35.851 29.2193C36.3637 28.6468 36.621 28.3594 37.4688 28.3594H38.7504C38.117 32.7265 34.3154 36.0938 29.7344 36.0938ZM40.1328 25.7812H37.4688C35.4689 25.7812 34.5796 26.7743 33.9303 27.4995C33.4176 28.072 33.1603 28.3594 32.3125 28.3594C31.4647 28.3594 31.2074 28.072 30.6947 27.4995C30.0454 26.7743 29.1561 25.7812 27.1562 25.7812C25.1564 25.7812 24.2671 26.7743 23.6178 27.4995C23.1051 28.072 22.8478 28.3594 22 28.3594C21.1522 28.3594 20.8949 28.072 20.3822 27.4995C19.7329 26.7743 18.8436 25.7812 16.8438 25.7812C14.8439 25.7812 13.9546 26.7743 13.3053 27.4995C12.7926 28.072 12.5353 28.3594 11.6875 28.3594C10.8257 28.3594 10.5534 28.0662 10.0109 27.4821C9.34424 26.7643 8.43116 25.7812 6.44531 25.7812H3.86719C3.1564 25.7812 2.57812 25.203 2.57812 24.4922C2.57812 23.7814 3.1564 23.2031 3.86719 23.2031H40.1328C40.8436 23.2031 41.4219 23.7814 41.4219 24.4922C41.4219 25.203 40.8436 25.7812 40.1328 25.7812Z"
@@ -117,7 +115,7 @@
             </button>
           </li>
           <li class="category__box">
-            <button class="category__btn btn--big" type="button" data-filter=".category-b">
+            <button class="category__btn" type="button" data-filter=".category-a">
               <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_783)">
                   <path
@@ -152,7 +150,7 @@
             </button>
           </li>
           <li class="category__box">
-            <button class="category__btn btn--big" type="button" data-filter=".category-c">
+            <button class="category__btn" type="button" data-filter=".category-b">
               <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_805)">
                   <path
@@ -190,7 +188,7 @@
             </button>
           </li>
           <li class="category__box">
-            <button class="category__btn btn--big" type="button" data-filter=".category-d">
+            <button class="category__btn" type="button" data-filter=".category-c">
               <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_828)">
                   <g clip-path="url(#clip1_21_828)">
@@ -233,7 +231,7 @@
             </button>
           </li>
           <li class="category__box">
-            <button class="category__btn btn--big" type="button" data-filter=".category-e">
+            <button class="category__btn" type="button" data-filter=".category-d">
               <svg class="category__btn-icon" width="44" height="44" fill="none">
                 <g clip-path="url(#clip0_21_840)">
                   <path
@@ -279,62 +277,62 @@
         </ul>
         <ul class="category__products">
 
-          <li class="category__item mix category-a category-b category-c">
+          <li class="category__item mix category-d category-b category-c">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/cheeseburger-salat.jpg" wight="140" height="140"
                   alt="Чизбургер с листьями салата">
-                <span class="product-card__name">Чизбургер с листьями салата</span>
+                <h3 class="product-card__name">Чизбургер с листьями салата</h3>
                 <span class="product-card__price">
                   160
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
 
-          <li class="category__item mix category-b category-d category-a">
+          <li class="category__item mix category-b category-d category-c">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" wight="140" height="140"
                   alt="Бифproduct-бургер">
-                <span class="product-card__name">Бифбургер</span>
+                <h3 class="product-card__name">Бифбургер</h3>
                 <span class="product-card__price">
                   190
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
 
-          <li class="category__item mix category-c category-d category-a">
+          <li class="category__item mix category-c category-d">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/cheeseburger-king.jpg" wight="140" height="140"
                   alt="Королевский чизбургерг">
-                <span class="product-card__name">Королевский чизбургер</span>
+                <h3 class="product-card__name">Королевский чизбургер</h3>
                 <span class="product-card__price">
                   260
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
 
-          <li class="category__item mix category-d category-e category-a">
+          <li class="category__item mix category-b category-c">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/black-hamburger.jpg" wight="140" height="140"
                   alt="чёрный гамбургер">
-                <span class="product-card__name">Черный гамбургер</span>
+                <h3 class="product-card__name">Черный гамбургер</h3>
                 <span class="product-card__price">
                   199
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
@@ -344,87 +342,87 @@
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/chiken-burger.jpg" wight="140" height="140"
                   alt="Чикен-бургер">
-                <span class="product-card__name">Чикен бургер</span>
+                <h3 class="product-card__name">Чикен бургер</h3>
                 <span class="product-card__price">
                   180
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
 
-          <li class="category__item mix category-a category-b category-c">
+          <li class="category__item mix category-d category-b category-c">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/cheeseburger-salat.jpg" wight="140" height="140"
                   alt="Чизбургер с листьями салата">
-                <span class="product-card__name">Чизбургер с листьями салата</span>
+                <h3 class="product-card__name">Чизбургер с листьями салата</h3>
                 <span class="product-card__price">
                   160
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
-          
-          <li class="category__item mix category-b category-d category-a">
+
+          <li class="category__item mix category-b category-d category-c">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" wight="140" height="140"
                   alt="Бифproduct-бургер">
-                <span class="product-card__name">Бифбургер</span>
+                <h3 class="product-card__name">Бифбургер</h3>
                 <span class="product-card__price">
                   190
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
-          
-          <li class="category__item mix category-c category-d category-a">
+
+          <li class="category__item mix category-c category-b category-a">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/cheeseburger-king.jpg" wight="140" height="140"
                   alt="Королевский чизбургерг">
-                <span class="product-card__name">Королевский чизбургер</span>
+                <h3 class="product-card__name">Королевский чизбургер</h3>
                 <span class="product-card__price">
                   260
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
-          
-          <li class="category__item mix category-d category-e category-a">
+
+          <li class="category__item mix category-b category-c category-a">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/black-hamburger.jpg" wight="140" height="140"
                   alt="чёрный гамбургер">
-                <span class="product-card__name">Черный гамбургер</span>
+                <h3 class="product-card__name">Черный гамбургер</h3>
                 <span class="product-card__price">
                   199
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
-          
-          <li class="category__item mix category-a category-b category-e">
+
+          <li class="category__item mix category-c category-b category-d">
             <article class="product-card">
               <a class="product-card__link" href="#">
                 <img class="product-card__img" src="./images/burgers/chiken-burger.jpg" wight="140" height="140"
                   alt="Чикен-бургер">
-                <span class="product-card__name">Чикен бургер</span>
+                <h3 class="product-card__name">Чикен бургер</h3>
                 <span class="product-card__price">
                   180
                   <span class="currency">грн.</span>
                 </span>
-                <button class="product-card__btn btn" href="#">В корзину</button>
+                <button class="btn" type="button">В корзину</button>
               </a>
             </article>
           </li>
@@ -447,8 +445,8 @@
             <label class="footer-form__label">
               <input class="footer-form__field" type="email" name="userEmail" placeholder="Ваш email" required>
             </label>
-            <button class="footer-form__btn btn--long" type="submit">
-              <svg width="17" height="16" fill="none">
+            <button class="footer-form__btn btn btn--long" type="submit">
+              <svg class="footer-form__btn-icon" width="17" height="16" fill="none">
                 <path
                   d="M10.318 14.3001C10.0587 14.3001 9.81931 14.1616 9.70237 13.9406L7.66079 10.0822C7.54867 9.87034 7.56793 9.61684 7.71031 9.42119L11.0059 5.20009L6.53819 8.31359C6.33115 8.44879 6.06288 8.46569 5.83864 8.36039L1.75616 6.43184C1.51128 6.31549 1.36202 6.07304 1.37715 5.81434C1.3916 5.55564 1.56838 5.32944 1.82564 5.24039L14.8951 0.690388C15.1461 0.603938 15.4288 0.660488 15.6194 0.840538C15.8092 1.01929 15.8711 1.28709 15.7783 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3435 14.2994 10.3304 14.3001 10.318 14.3001Z"
                   fill="white" />
@@ -500,7 +498,7 @@
           <ul class="footer__items">
             <li class="footer__adress-item">
               <a class="footer__adress-link" href="#">
-                <svg class="footer__adress-item--icon" width="24" height="24" fill="none">
+                <svg class="footer__adress-icon" width="24" height="24" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
                     stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -512,7 +510,7 @@
             </li>
             <li class="footer__adress-item">
               <a class="footer__adress-link" href="tel:+380501112233">
-                <svg class="footer__adress-item--icon" width="24" height="24" fill="none">
+                <svg class="footer__adress-icon" width="24" height="24" fill="none">
                   <path d="M14.353 2.5C18.054 2.911 20.978 5.831 21.393 9.532" stroke="#31352B" stroke-width="1.5"
                     stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M14.353 6.04297C16.124 6.38697 17.508 7.77197 17.853 9.54297" stroke="#31352B"
@@ -525,7 +523,7 @@
             </li>
             <li class="footer__adress-item">
               <a class="footer__adress-link" href="mailto:support@sfood.com">
-                <svg class="footer__adress-item--icon" width="24" height="24" fill="none">
+                <svg class="footer__adress-icon" width="24" height="24" fill="none">
                   <path
                     d="M17.9026 8.85107L13.4593 12.4641C12.6198 13.1301 11.4387 13.1301 10.5992 12.4641L6.11844 8.85107"
                     stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -539,7 +537,7 @@
           <ul class="footer__social">
             <li class="footer__social-item">
               <a class="footer__social-link" href="#">
-                <svg class="footer__social-link--icon" width="10" height="21" fill="none">
+                <svg class="footer__social-icon" width="10" height="21" fill="none">
                   <path
                     d="M2.54678 20.5263V10.8948H0V7.42695H2.54678V4.46499C2.54678 2.13745 4.05118 0 7.51762 0C8.92113 0 9.95896 0.13455 9.95896 0.13455L9.87718 3.3729C9.87718 3.3729 8.81876 3.3626 7.66377 3.3626C6.41371 3.3626 6.21344 3.93867 6.21344 4.89481V7.42695H9.97655L9.81281 10.8948H6.21344V20.5263H2.54678Z"
                     fill="black" />
@@ -549,7 +547,7 @@
             </li>
             <li class="footer__social-item">
               <a class="footer__social-link" href="#">
-                <svg class="footer__social-link--icon" width="21" height="17" fill="none">
+                <svg class="footer__social-icon" width="21" height="17" fill="none">
                   <path
                     d="M20.5263 1.98086C19.7715 2.30648 18.95 2.54082 18.1039 2.6321C18.9824 2.11021 19.6402 1.28571 19.954 0.313295C19.1297 0.80367 18.2266 1.14753 17.2849 1.32962C16.8913 0.908848 16.4153 0.573641 15.8865 0.344888C15.3577 0.116135 14.7874 -0.00126247 14.2113 1.02382e-05C11.8802 1.02382e-05 10.0054 1.88959 10.0054 4.20839C10.0054 4.534 10.0448 4.85962 10.109 5.17291C6.61845 4.99036 3.50534 3.3228 1.43568 0.769655C1.05857 1.41378 0.86095 2.14718 0.863383 2.89358C0.863383 4.35393 1.60589 5.6416 2.73816 6.39891C2.0709 6.37263 1.41926 6.18923 0.836248 5.86362V5.91542C0.836248 7.9604 2.2818 9.6551 4.20838 10.0449C3.84664 10.1388 3.47452 10.1869 3.10078 10.1879C2.82696 10.1879 2.56795 10.1608 2.30647 10.1238C2.8393 11.7914 4.39092 13.0026 6.23856 13.042C4.79301 14.1743 2.98237 14.8403 1.01633 14.8403C0.663572 14.8403 0.337953 14.828 0 14.7885C1.86491 15.9849 4.07763 16.6756 6.46057 16.6756C14.1965 16.6756 18.4295 10.2669 18.4295 4.70422C18.4295 4.52167 18.4295 4.33913 18.4172 4.15658C19.2362 3.55715 19.954 2.81464 20.5263 1.98086Z"
                     fill="black" />
@@ -559,7 +557,7 @@
             </li>
             <li class="footer__social-item ">
               <a class="footer__social-link" href="#">
-                <svg class="footer__social-link--icon" width="20" height="20" fill="none">
+                <svg class="footer__social-icon" width="20" height="20" fill="none">
                   <path
                     d="M9.74756 6.49862C7.95723 6.49862 6.49618 7.95967 6.49618 9.75C6.49618 11.5403 7.95723 13.0014 9.74756 13.0014C11.5379 13.0014 12.9989 11.5403 12.9989 9.75C12.9989 7.95967 11.5379 6.49862 9.74756 6.49862ZM19.4993 9.75C19.4993 8.40359 19.5115 7.06938 19.4359 5.72541C19.3602 4.16435 19.0041 2.77891 17.8626 1.63739C16.7186 0.493433 15.3356 0.139757 13.7746 0.0641433C12.4282 -0.0114703 11.094 0.00072551 9.75 0.00072551C8.40359 0.00072551 7.06938 -0.0114703 5.72541 0.0641433C4.16435 0.139757 2.77892 0.495872 1.63739 1.63739C0.493433 2.78135 0.139757 4.16435 0.0641433 5.72541C-0.0114703 7.07182 0.00072551 8.40603 0.00072551 9.75C0.00072551 11.094 -0.0114703 12.4306 0.0641433 13.7746C0.139757 15.3356 0.495873 16.7211 1.63739 17.8626C2.78135 19.0066 4.16435 19.3602 5.72541 19.4359C7.07182 19.5115 8.40603 19.4993 9.75 19.4993C11.0964 19.4993 12.4306 19.5115 13.7746 19.4359C15.3356 19.3602 16.7211 19.0041 17.8626 17.8626C19.0066 16.7186 19.3602 15.3356 19.4359 13.7746C19.5139 12.4306 19.4993 11.0964 19.4993 9.75ZM9.74756 14.7527C6.97913 14.7527 4.74487 12.5184 4.74487 9.75C4.74487 6.98157 6.97913 4.74731 9.74756 4.74731C12.516 4.74731 14.7503 6.98157 14.7503 9.75C14.7503 12.5184 12.516 14.7527 9.74756 14.7527ZM14.9551 5.71077C14.3088 5.71077 13.7868 5.18879 13.7868 4.54242C13.7868 3.89604 14.3088 3.37407 14.9551 3.37407C15.6015 3.37407 16.1235 3.89604 16.1235 4.54242C16.1237 4.6959 16.0936 4.84792 16.035 4.98976C15.9763 5.13159 15.8903 5.26047 15.7817 5.369C15.6732 5.47753 15.5443 5.56358 15.4025 5.62223C15.2606 5.68087 15.1086 5.71096 14.9551 5.71077Z"
                     fill="black" />

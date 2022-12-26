@@ -64,16 +64,4 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
   }
-
-}
-
-.mixitup-control-active {
-  background-color: $accent;
-  color: $white;
-
-  &:hover {
-    color: $accent;
-    background-color: rgba(255, 122, 80, 0.1);
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-  }
 }

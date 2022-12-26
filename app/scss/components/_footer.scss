@@ -19,16 +19,15 @@
     width: 100%;
     margin-right: 70px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 6px;
+    grid-template-columns: 213px 152px 188px;
+    grid-auto-rows: 33px;
+    gap: 10px;
   }
 
   &__link {
     font-size: 18px;
     line-height: 130%;
+    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
 
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
@@ -53,7 +52,7 @@
     align-items: center;
   }
 
-  &__social-item {
+  &__social-item:not(:last-child) {
     margin-right: 13px;
   }
 
@@ -62,9 +61,11 @@
     width: 39px;
     height: 39px;
     border-radius: 50%;
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 45px;
+    transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
@@ -79,7 +80,6 @@
     &:hover {
       background-color: $accent;
     }
-
   }
 
   &__adress-link {
@@ -87,6 +87,7 @@
     align-items: center;
     font-size: 16px;
     line-height: 32px;
+    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
 
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
@@ -105,20 +106,22 @@
   &__adress-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
     color: $dark;
     background-position: left;
     background-repeat: no-repeat;
     background-size: 24px;
 
-    &--icon {
-      margin-right: 7px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
+  }
+
+  &__adress-icon {
+    margin-right: 7px;
   }
 
   &__text {
     text-align: center;
-    display: block;
     padding: 30px 0;
     font-size: 14px;
     line-height: 150%;
@@ -143,6 +146,7 @@
     border-radius: 5px;
     font-size: 14px;
     line-height: 130%;
+    transition: box-shadow 0.3s;
 
     &::placeholder {
       color: $gray;
@@ -163,7 +167,7 @@
     align-items: center;
   }
 
-  &__btn svg {
+  &__btn-icon {
     margin-right: 15px;
   }
 }

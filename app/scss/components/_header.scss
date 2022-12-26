@@ -20,26 +20,6 @@
       margin-right: 10px;
     }
 
-    &-icon {
-      position: absolute;
-      top: 25%;
-      left: 25%;
-    }
-
-    &-quantity {
-      position: absolute;
-      text-align: center;
-      background-color: $accent;
-      color: $white;
-      border-radius: 50%;
-      right: 4px;
-      top: 7px;
-      width: 14px;
-      height: 14px;
-      font-size: 10px;
-      line-height: 15px;
-    }
-
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
       border-radius: 5px;
@@ -56,14 +36,36 @@
       border-radius: 5px;
     }
 
-    &:hover &-quantity {
+    &:hover .header__btn-quantity {
       background-color: $white;
       color: $accent;
     }
   }
+
+  &__btn-icon {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+
+  &__btn-quantity {
+    position: absolute;
+    text-align: center;
+    background-color: $accent;
+    color: $white;
+    border-radius: 50%;
+    right: 4px;
+    top: 7px;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
 }
 
 .header-menu {
+  margin-right: 55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,7 +73,6 @@
 
   &__list {
     display: flex;
-    margin-right: 60px;
   }
 
   &__item:not(:last-child) {
@@ -79,7 +80,16 @@
   }
 
   &__link {
+    font-size: 18px;
+    line-height: 120%;
     transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
+
+    &.current {
+      color: $accent;
+      &:hover {
+        color: $darkBlue-900;
+      }
+    }
 
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
@@ -94,8 +104,4 @@
       color: $accent
     }
   }
-}
-
-.current {
-  color: $accent;
 }
