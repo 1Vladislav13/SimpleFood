@@ -13,6 +13,7 @@
   &__btn {
     width: 44px;
     height: 44px;
+    border-radius: 5px;
     position: relative;
     transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 
@@ -22,7 +23,6 @@
 
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      border-radius: 5px;
       background-color: rgba(255, 122, 80, 0.1);
     }
 
@@ -33,19 +33,21 @@
 
     &:hover {
       background-color: $accent;
-      border-radius: 5px;
-    }
 
-    &:hover .header__btn-quantity {
-      background-color: $white;
-      color: $accent;
+      .header__btn-quantity {
+        background-color: $white;
+        color: $accent;
+      }
+
+      .header__btn-icon {
+        stroke: white;
+      }
     }
   }
 
   &__btn-icon {
-    position: absolute;
-    top: 25%;
-    left: 25%;
+    stroke: $darkBlue-900;
+    transition: stroke 0.3s;
   }
 
   &__btn-quantity {
@@ -60,8 +62,8 @@
     height: 14px;
     font-size: 10px;
     line-height: 15px;
+    transition: background-color 0.3s;
   }
-
 }
 
 .header-menu {
@@ -86,9 +88,6 @@
 
     &.current {
       color: $accent;
-      &:hover {
-        color: $darkBlue-900;
-      }
     }
 
     &:focus {

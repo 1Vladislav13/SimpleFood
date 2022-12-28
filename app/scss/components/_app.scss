@@ -1,0 +1,49 @@
+.app {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+    margin-right: 50px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    margin-right: 50px;
+  }
+
+  &__markets {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    border-radius: 8px;
+    transition: opacity 0.3s, box-shadow 0.3s;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:focus {
+
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    display: block;
+  }
+}

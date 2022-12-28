@@ -1,0 +1,81 @@
+.restaurant-card {
+  padding-bottom: 20px;
+  display: block;
+  background: $white;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 3px 15px rgba(255, 104, 56, 0.5);
+  }
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin: 0 20px 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__box {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__hours {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 167%;
+  }
+
+  &__link {
+    padding: 5px 28px;
+    background-color: $accent;
+    border-radius: 20px;
+    line-height: 1;
+    transition: box-shadow 0.3s, background-color 0.3s;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+      .restaurant-card__link-icon {
+        transform: translateX(100%);
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      background-color: $active;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+      .restaurant-card__link-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      background-color: $active;
+
+      .restaurant__link-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__link-icon {
+    fill: $white;
+    transition: fill 0.3s, transform 0.3s;
+  }
+
+}
