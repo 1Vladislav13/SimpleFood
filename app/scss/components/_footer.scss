@@ -50,10 +50,8 @@
   &__social {
     display: flex;
     align-items: center;
-  }
-
-  &__social-item:not(:last-child) {
-    margin-right: 13px;
+    flex-wrap: wrap;
+    gap: 13px;
   }
 
   &__social-link {

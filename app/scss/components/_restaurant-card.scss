@@ -1,9 +1,11 @@
 .restaurant-card {
-  padding-bottom: 20px;
-  display: block;
-  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $white;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  height: 100%;
   transition: box-shadow 0.3s;
 
   &:hover {
@@ -12,37 +14,47 @@
 
   &__img {
     margin-bottom: 15px;
+    object-fit: contain;
   }
 
   &__subtitle {
-    margin: 0 20px 20px;
+    margin: 0 20px;
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
   }
 
   &__box {
-    margin: 0 20px;
+    padding: 15px 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__icon {
-    margin-right: 10px;
   }
 
   &__hours {
     font-weight: 300;
     font-size: 18px;
     line-height: 167%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    background-image: url('../images/icon/timerRestaurant.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &__link {
-    padding: 5px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79px;
+    height: 33px;
     background-color: $accent;
     border-radius: 20px;
-    line-height: 1;
     transition: box-shadow 0.3s, background-color 0.3s;
 
     &:hover {

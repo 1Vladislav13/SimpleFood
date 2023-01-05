@@ -52,6 +52,10 @@ body {
 .logo {
   transition: opacity 0.3s, box-shadow 0.3s;
 
+  &__img {
+    object-fit: contain;
+  }
+
   &:hover {
     opacity: 0.8;
   }

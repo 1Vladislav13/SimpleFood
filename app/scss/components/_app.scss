@@ -6,31 +6,32 @@
     align-items: center;
   }
 
+  &__content {
+    max-width: 540px;
+    margin-right: 60px;
+  }
+
   &__title {
     text-align: left;
     margin-bottom: 45px;
-    margin-right: 50px;
   }
 
   &__text {
     margin-bottom: 30px;
-    margin-right: 50px;
   }
 
   &__markets {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   &__link {
     border-radius: 8px;
     transition: opacity 0.3s, box-shadow 0.3s;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
 
     &:focus {
-
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     }
 
@@ -45,5 +46,20 @@
 
   &__icon {
     display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--appstore {
+      background-image: url('../images/icon/apple.svg');
+    }
+
+    &--google {
+      background-image: url('../images/icon/googlePlay.svg');
+    }
+  }
+
+  &__img {
+    object-fit: contain;
   }
 }
