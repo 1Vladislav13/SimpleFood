@@ -8,7 +8,7 @@
     background-image: url('../images/feauters-bg.png');
     background-repeat: no-repeat;
     background-position: 70px;
-    background-size: contain;
+    background-size: initial;
   }
 
   &__inner {
@@ -39,24 +39,34 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-  }
 
-  &__item-icon {
-    margin-right: 30px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 30px;
+      width: 34px;
+      height: 34px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 
     &--timer {
-      background-image: url('../images/icon/timer.svg');
+      &::before {
+        background-image: url('../images/icon/timer.svg');
+      }
     }
 
     &--delivery {
-      background-image: url('../images/icon/delivery.svg');
+      &::before {
+        background-image: url('../images/icon/delivery.svg');
+      }
     }
 
-    &--restaurant {
-      background-image: url('../images/icon/restaurant.svg');
+    &--restaurant{
+      &::before {
+        background-image: url('../images/icon/restaurant.svg');
+      }
     }
   }
 

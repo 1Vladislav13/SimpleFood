@@ -28,8 +28,22 @@
   }
 
   &__link {
+    height: 40px;
     border-radius: 8px;
     transition: opacity 0.3s, box-shadow 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--appstore {
+      width: 120px;
+      background-image: url('../images/icon/apple.svg');
+    }
+
+    &--google {
+      background-image: url('../images/icon/googlePlay.svg');
+      width: 135px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
@@ -41,21 +55,6 @@
 
     &:active {
       opacity: 0.8;
-    }
-  }
-
-  &__icon {
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    &--appstore {
-      background-image: url('../images/icon/apple.svg');
-    }
-
-    &--google {
-      background-image: url('../images/icon/googlePlay.svg');
     }
   }
 
