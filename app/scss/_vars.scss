@@ -9,3 +9,32 @@ $gray: #c2c2c2;
 $white: #fff;
 $active:#fff2ed;
 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin desktop() {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+

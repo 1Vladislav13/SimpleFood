@@ -1,0 +1,140 @@
+.mobile-menu {
+  display: none;
+
+  @include laptop {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 25px;
+    width: 84%;
+    height: 100vh;
+    background-color: $white;
+    transform: translateX(-200%);
+    z-index: 2;
+    transition: transform ease 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+      left: 100%;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+
+    }
+  }
+
+  &--active {
+    @include laptop {
+      transform: translateX(0);
+    }
+
+  }
+
+  &__box {
+    padding-left: 15px;
+    border-bottom: 1px solid #EEEFF3;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__btn {
+    margin-right: 16px;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    transition: box-shadow 0.3s, opacity 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 26%;
+      width: 20px;
+      height: 2px;
+      background-color: $darkBlue-900;
+      transform: rotate(45deg);
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $accent;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 26%;
+      width: 20px;
+      height: 2px;
+      background-color: $darkBlue-900;
+      transform: rotate(-45deg);
+      transition: background-color 0.3s;
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        background-color: $accent;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+  }
+
+  &__menu {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #EEEFF3;
+  }
+
+  &__menu-list {
+    display: block;
+    padding: 12px 0;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  &__menu-link {
+    display: block;
+    padding: 13px 0;
+    padding-left: 15px;
+  }
+
+  &__address-items {
+    padding-top: 15px;
+  }
+
+  &__address-item {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  &__address-link {
+    height: 44px;
+    padding-left: 15px;
+  }
+
+  &__social {
+    padding-left: 15px;
+  }
+
+}

@@ -2,12 +2,30 @@
 
   &__title {
     margin-bottom: 45px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 370px);
+      justify-content: center;
+    }
+
+    @include laptop {
+      gap: 10px;
+    }
+
+    @include tablet {
+      display: block;
+    }
   }
+
 
 }

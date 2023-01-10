@@ -2,6 +2,11 @@
 
   &__title {
     margin-bottom: 45px;
+
+    @include tablet {
+      margin-bottom: 30px;
+      ;
+    }
   }
 
   &__wrapper {
@@ -16,12 +21,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img {
     border-radius: 50%;
     margin-right: 80px;
     object-fit: contain;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @include mobile {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__blockquote {
@@ -29,6 +52,15 @@
     max-width: 570px;
     font-style: italic;
     position: relative;
+
+    @include tablet {
+      font-size: 14px;
+      max-width: 380px;
+    }
+
+    @include mobile {
+      max-width: 265px;
+    }
 
     &::before,
     &::after {
@@ -45,12 +77,20 @@
       background-image: url('../images/icon/quoteUp.svg');
       left: -40px;
       top: 0;
+
+      @include tablet {
+        left: -30px;
+      }
     }
 
     &::after {
       background-image: url('../images/icon/quoteDown.svg');
       right: -40px;
       bottom: 90px;
+
+      @include tablet {
+        right: -30px;
+      }
     }
   }
 
@@ -61,6 +101,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
+
+    @include tablet {
+      margin-top: 20px;
+      font-size: 16px;
+    }
   }
 
   &__author-text {
@@ -70,5 +115,9 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
+
+    @include tablet {
+      margin-top: 10px;
+    }
   }
 }

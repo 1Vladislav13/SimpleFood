@@ -1,4 +1,6 @@
 .restaurant-card {
+  width: 370px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   background-color: $white;
@@ -7,13 +9,17 @@
   height: 100%;
   transition: box-shadow 0.3s;
 
+  @include tablet {
+    margin: 0 auto 30px;
+  }
+
   &:hover {
     box-shadow: 0 3px 15px rgba(255, 104, 56, 0.5);
   }
 
   &__img {
     margin-bottom: 15px;
-    object-fit: contain;
+    object-fit: fill;
   }
 
   &__subtitle {

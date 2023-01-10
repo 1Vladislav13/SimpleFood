@@ -76,8 +76,26 @@
 
 .slick-prev {
   order: 1;
+  @include tablet {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+  @include mobile {
+    top: 7%;
+    left: 11%;
+  }
 }
 
 .slick-next {
-  order: 2
+  order: 2;
+  @include tablet {
+    position: absolute;
+    top: 15%;
+    right: 20%;
+  }
+  @include mobile {
+    top: 7%;
+    right: 11%;
+  }
 }

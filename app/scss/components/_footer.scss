@@ -3,6 +3,17 @@
   &__top {
     display: flex;
     margin-bottom: 66px;
+
+    @include desktop {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @include laptop {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
 
   &__logo {
@@ -12,6 +23,11 @@
 
   &__box {
     margin-right: 70px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -22,6 +38,14 @@
     grid-template-columns: 213px 152px 188px;
     grid-auto-rows: 33px;
     gap: 10px;
+
+    @include tablet {
+      display: flex;
+      gap: 0;
+      margin: 0;
+      flex-direction: column;
+      order: 3;
+    }
   }
 
   &__link {
@@ -41,100 +65,12 @@
     &:hover {
       color: $accent
     }
-  }
 
-  &__items {
-    margin-bottom: 15px;
-  }
-
-  &__social {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 13px;
-  }
-
-  &__social-link {
-    background-color: $silver-200;
-    width: 39px;
-    height: 39px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 45px;
-    transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      background-color: rgba(255, 122, 80, 0.1);
+    @include tablet {
+      display: block;
+      padding-bottom: 19px;
     }
 
-    &:active {
-      background-color: $active;
-      color: $accent;
-
-      .footer__social-icon {
-        fill: $accent;
-      }
-    }
-
-    &:hover {
-      background-color: $accent-900;
-
-      .footer__social-icon {
-        fill: $white;
-      }
-    }
-  }
-
-  &__social-icon {
-    fill: $dark;
-    transition: fill 0.3s;
-  }
-
-  &__adress-link {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    line-height: 32px;
-    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      border-radius: 5px;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
-    }
-
-    &:hover {
-      color: $accent-900;
-
-      .footer__adress-icon {
-        stroke: $accent;
-      }
-    }
-  }
-
-  &__adress-item {
-    display: flex;
-    align-items: center;
-    color: $dark;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 24px;
-
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
-
-  &__adress-icon {
-    margin-right: 7px;
-    stroke: $dark;
-    transition: stroke 0.3s;
   }
 
   &__text {
@@ -144,49 +80,49 @@
     line-height: 150%;
     border-top: 1px solid $silver-200;
   }
-}
 
-.footer-form {
+  .footer-form {
 
-  &__label {
-    margin-bottom: 12px;
-    display: block;
-  }
-
-  &__field {
-    max-width: 200px;
-    width: 100%;
-    display: block;
-    margin-right: 0;
-    padding: 13px 15px;
-    border: 1px solid $silver-200;
-    border-radius: 5px;
-    font-size: 14px;
-    line-height: 130%;
-    transition: box-shadow 0.3s;
-
-    &::placeholder {
-      color: $gray;
-      transition: color 0.3s;
+    &__label {
+      margin-bottom: 12px;
+      display: block;
     }
 
-    &:hover::placeholder {
-      color: $darkBlue-900;
+    &__field {
+      max-width: 200px;
+      width: 100%;
+      display: block;
+      margin-right: 0;
+      padding: 13px 15px;
+      border: 1px solid $silver-200;
+      border-radius: 5px;
+      font-size: 14px;
+      line-height: 130%;
+      transition: box-shadow 0.3s;
+
+      &::placeholder {
+        color: $gray;
+        transition: color 0.3s;
+      }
+
+      &:hover::placeholder {
+        color: $darkBlue-900;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      }
     }
 
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    &__btn {
+      display: flex;
+      align-items: center;
     }
-  }
 
-  &__btn {
-    display: flex;
-    align-items: center;
-  }
-
-  &__btn-icon {
-    margin-right: 15px;
-    fill: $white;
-    transition: fill 0.3s;
+    &__btn-icon {
+      margin-right: 15px;
+      fill: $white;
+      transition: fill 0.3s;
+    }
   }
 }

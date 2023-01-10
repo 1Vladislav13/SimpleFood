@@ -11,10 +11,15 @@
   padding-bottom: 20px;
   transition: box-shadow 0.7s;
 
+  @include tablet {
+    margin: 0 auto;
+  }
+
   &:hover {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
 
     .product-card__link {
+
       &::after,
       &::before {
         opacity: 1;

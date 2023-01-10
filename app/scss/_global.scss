@@ -39,6 +39,10 @@ body {
 
 .section {
   padding-bottom: 120px;
+
+  @include tablet {
+    padding-bottom: 40px;
+  }
 }
 
 .title {
@@ -47,13 +51,26 @@ body {
   font-size: 36px;
   line-height: 130%;
   font-weight: 500;
+
+  @include tablet {
+    font-size: 24px;
+  }
 }
 
 .logo {
   transition: opacity 0.3s, box-shadow 0.3s;
 
+
   &__img {
     object-fit: contain;
+  }
+
+  &__img-header {
+
+    @include mobile {
+      width: 115px;
+      height: 23px;
+    }
   }
 
   &:hover {
@@ -68,4 +85,9 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
   }
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: ease background-color 0.5s;
 }

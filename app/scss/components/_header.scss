@@ -1,6 +1,10 @@
 .header {
   padding: 60px 0;
 
+  @include mobile {
+    padding: 14px 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -8,6 +12,10 @@
 
   &__user-nav {
     display: flex;
+
+    @include laptop {
+      margin-right: 10px;
+    }
   }
 
   &__btn {
@@ -64,30 +72,18 @@
     line-height: 15px;
     transition: background-color 0.3s;
   }
-}
 
-.header-menu {
-  margin-right: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 2;
+  &__menu-btn {
+    display: none;
+    transition: box-shadow 0.3s, opacity 0.3s, background-color 0.3s;
 
-  &__list {
-    display: flex;
-  }
+    &:hover .header__menu-line {
+      background-color: $accent;
 
-  &__item:not(:last-child) {
-    margin-right: 45px;
-  }
-
-  &__link {
-    font-size: 18px;
-    line-height: 120%;
-    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
-
-    &.current {
-      color: $accent;
+      &::before,
+      &::after {
+        background-color: $accent;
+      }
     }
 
     &:focus {
@@ -96,11 +92,52 @@
     }
 
     &:active {
-      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+      opacity: 0.5;
     }
 
-    &:hover {
-      color: $accent
+    @include laptop {
+      display: block;
+      width: 44px;
+      height: 44px;
+      border-radius: 3px;
     }
   }
+
+  &__menu-line {
+    display: none;
+
+    @include laptop {
+      display: block;
+      margin: 0 auto;
+      height: 2px;
+      width: 30px;
+      background-color: $darkBlue-900;
+      position: relative;
+      transition: background-color 0.3s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: $darkBlue-900;
+        top: -10px;
+        right: 0;
+        transition: background-color 0.3s;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: $darkBlue-900;
+        bottom: -10px;
+        right: 0;
+        transition: background-color 0.3s;
+      }
+
+    }
+  }
+
 }

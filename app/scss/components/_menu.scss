@@ -1,0 +1,48 @@
+.menu {
+  margin-right: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 2;
+
+  @include mobile {
+    margin-right: 10px;
+  }
+
+  &__list {
+    display: flex;
+
+    &--hidden {
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 120%;
+    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
+
+    &.current {
+      color: $accent;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+    }
+
+    &:hover {
+      color: $accent
+    }
+  }
+}

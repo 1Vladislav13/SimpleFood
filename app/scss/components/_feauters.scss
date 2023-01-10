@@ -9,24 +9,58 @@
     background-repeat: no-repeat;
     background-position: 70px;
     background-size: initial;
+    position: relative;
+    z-index: -1;
+
+    @include tablet {
+      background-size: contain;
+      background-position: 10px;
+      min-height: 462px;
+    }
+
+    &::before {
+      @include desktop {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(249, 250, 255, 0.85);
+        z-index: -1;
+      }
+    }
   }
 
   &__inner {
     margin-right: 70px;
-    max-width: 470px
+    max-width: 470px;
+
+    @include tablet {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__title {
     text-align: left;
+    margin-bottom: 30px;
   }
 
-  &__title,
   &__text {
     margin-bottom: 30px;
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 
   &__list {
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -36,19 +70,32 @@
     font-size: 24px;
     line-height: 150%;
 
+    @include tablet {
+      font-size: 18px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @include tablet {
+        margin-bottom: 15px;
+      }
     }
 
     &::before {
       content: "";
       display: block;
       margin-right: 30px;
-      width: 34px;
+      max-width: 34px;
+      width: 100%;
       height: 34px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include tablet {
+        margin-right: 10px;
+      }
     }
 
     &--timer {
@@ -63,7 +110,7 @@
       }
     }
 
-    &--restaurant{
+    &--restaurant {
       &::before {
         background-image: url('../images/icon/restaurant.svg');
       }
@@ -72,5 +119,9 @@
 
   &__btn {
     display: inline-block;
+
+    @include tablet {
+      font-size: 14px;
+    }
   }
 }
