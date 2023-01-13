@@ -26,6 +26,20 @@
       background-color: $accent-600;
     }
 
+    @include tablet {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
   }
 
   & .slick-active {
@@ -72,15 +86,32 @@
     fill: $gray;
     transition: fill 0.3s;
   }
+
+  @include tablet {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 .slick-prev {
   order: 1;
+
   @include tablet {
     position: absolute;
     top: 15%;
     left: 20%;
   }
+
   @include mobile {
     top: 7%;
     left: 11%;
@@ -89,11 +120,13 @@
 
 .slick-next {
   order: 2;
+
   @include tablet {
     position: absolute;
     top: 15%;
     right: 20%;
   }
+
   @include mobile {
     top: 7%;
     right: 11%;

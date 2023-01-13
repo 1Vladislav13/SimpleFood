@@ -5,14 +5,13 @@
     margin-bottom: 66px;
 
     @include desktop {
+      justify-content: space-around;
       flex-wrap: wrap;
       gap: 30px;
     }
 
-    @include laptop {
-      flex-wrap: nowrap;
-      flex-direction: column;
-      margin-bottom: 30px;
+    @include mobile {
+      justify-content: flex-start;
     }
   }
 
@@ -23,11 +22,6 @@
 
   &__box {
     margin-right: 70px;
-
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   &__list {
@@ -39,12 +33,22 @@
     grid-auto-rows: 33px;
     gap: 10px;
 
+    @include desktop {
+      order: 1;
+    }
+
     @include tablet {
-      display: flex;
-      gap: 0;
-      margin: 0;
-      flex-direction: column;
-      order: 3;
+      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      display: block;
+    }
+
+    @include laptop-landscape {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -68,7 +72,7 @@
 
     @include tablet {
       display: block;
-      padding-bottom: 19px;
+      padding: 10px 15px 10px 0;
     }
 
   }
@@ -111,6 +115,14 @@
 
       &:focus {
         box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      }
+
+      @include desktop {
+        min-width: 360px;
+      }
+
+      @include tablet {
+        min-width: 200px;
       }
     }
 

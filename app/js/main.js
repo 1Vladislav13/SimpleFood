@@ -1,12 +1,13 @@
 $(function () {
 
-
   $('.header__menu-btn').on('click', function () {
     $('.mobile-menu').toggleClass('mobile-menu--active');
+    $('.header').toggleClass('shadow');
   });
 
   $('.mobile-menu__btn').on('click', function () {
     $('.mobile-menu').removeClass('mobile-menu--active');
+    $('.header').removeClass('shadow');
   });
 
   const mediaQuery = window.matchMedia('(max-width: 769px)')
@@ -18,33 +19,7 @@ $(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
     });
-  } else {
-    
-  }
-
-
-  // $('.restaurant__list').slick({
-
-  //   responsive: [
-  //     {
-  //       breakpoint: 2048,
-  //       settings:
-  //         "unslick"
-  //     },
-  //     {
-  //       breakpoint: 769,
-  //       settings: {
-  //         arrows: false,
-  //         dots: true,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       }
-  //     }
-  //   ],
-
-  // });
-
-
+  } else {}
 
   $('.reviews__wrapper').slick({
     dots: true,
@@ -58,6 +33,7 @@ $(function () {
           arrows: true,
           dots: false,
         }
+        
       }
     ],
   });

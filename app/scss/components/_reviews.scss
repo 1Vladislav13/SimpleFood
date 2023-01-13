@@ -34,6 +34,10 @@
     margin-right: 80px;
     object-fit: contain;
 
+    @include laptop {
+      margin-right: 40px;
+    }
+
     @include tablet {
       margin-right: 0;
       margin-bottom: 20px;
@@ -53,13 +57,21 @@
     font-style: italic;
     position: relative;
 
+    @include desktop {
+      max-width: 480px;
+    }
+
+    @include laptop {
+      max-width: 310px;
+    }
+
     @include tablet {
       font-size: 14px;
       max-width: 380px;
     }
 
     @include mobile {
-      max-width: 265px;
+      max-width: 230px;
     }
 
     &::before,
@@ -90,6 +102,10 @@
 
       @include tablet {
         right: -30px;
+      }
+
+      @include mobile {
+        right: -20px;
       }
     }
   }

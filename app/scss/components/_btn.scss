@@ -11,6 +11,10 @@
     padding: 12px 32px;
     font-size: 18px;
     color: $white;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &--long {

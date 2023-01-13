@@ -26,6 +26,12 @@ $xl: 1200px;
   }
 }
 
+@mixin laptop-landscape() {
+  @media (max-width: $lg) and (orientation:landscape) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media (max-width: $md) {
     @content;

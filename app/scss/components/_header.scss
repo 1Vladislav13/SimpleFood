@@ -19,6 +19,10 @@
   }
 
   &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 5px;
@@ -64,8 +68,8 @@
     background-color: $accent;
     color: $white;
     border-radius: 50%;
-    right: 4px;
-    top: 7px;
+    right: 7px;
+    top: 8px;
     width: 14px;
     height: 14px;
     font-size: 10px;

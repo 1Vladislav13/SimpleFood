@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include laptop {
+      display: block;
+    }
   }
 
   &__content {
@@ -11,9 +15,10 @@
     margin-right: 60px;
 
     @include laptop {
-        margin-right: 0;
-        max-width: 100%;
-      }
+      margin-bottom: 30px;
+      margin-right: 0;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -76,6 +81,10 @@
     object-fit: contain;
 
     @include laptop {
+      margin: 0 auto;
+    }
+
+    @include mobile {
       display: none;
     }
   }
