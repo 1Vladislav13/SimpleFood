@@ -6,7 +6,10 @@
     align-items: center;
 
     @include laptop {
-      display: block;
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 

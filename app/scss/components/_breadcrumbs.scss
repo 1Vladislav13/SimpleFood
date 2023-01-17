@@ -1,0 +1,58 @@
+.breadcrumbs {
+  padding: 24px 0;
+  background-color: rgba(255, 122, 80, 0.1);
+
+  @include tablet {
+    padding: 9px 0;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        margin-left: 6px;
+        margin-right: 6px;
+        width: 6px;
+        height: 10px;
+        background-image: url('../images/icon/chevronright.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 120%;
+    color: #505050;
+    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+    }
+
+    &:hover {
+      color: $accent
+    }
+
+    @include tablet {
+      padding: 15px 0
+    }
+  }
+}

@@ -1,0 +1,142 @@
+//select
+
+.jq-selectbox__select {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  height: 47px;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  background: $white;
+  font-family: 'Rubic', sans-serif;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: ease color 0.3s, border-color 0.3s;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+
+    .jq-selectbox__trigger::after,
+    .jq-selectbox__trigger::before {
+      background-color: $accent;
+    }
+  }
+}
+
+.jq-selectbox li,
+.jq-selectbox li.selected {
+  background-color: $white;
+  padding: 5px 15px;
+  font-family: 'Rubic', sans-serif;
+  font-size: 14px;
+  border: 1px solid $gray;
+  cursor: pointer;
+  transition: ease color 0.3s, border-color 0.3s;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+  }
+
+  &:focus {
+    border-color: $accent;
+  }
+}
+
+.jq-selectbox__dropdown {
+  animation: ani 0.7s forwards;
+}
+
+.jq-selectbox__select-text {
+  margin-right: 15px;
+}
+
+.jq-selectbox__trigger {
+
+  &::after {
+    content: "";
+    display: block;
+    margin-top: -1px;
+    height: 1px;
+    width: 9px;
+    background-color: $gray;
+    transform: rotate(-45deg);
+    transition: ease background-color 0.3s;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    margin-left: -6px;
+    height: 1px;
+    width: 9px;
+    background-color: $gray;
+    transform: rotate(45deg);
+    transition: ease background-color 0.3s;
+  }
+}
+
+.jq-selectbox__trigger-arrow {
+  border: none;
+}
+
+.jq-selectbox li.selected {
+  background-color: $white;
+  color: $accent;
+}
+
+
+
+//input
+
+.jq-number__field {
+  height: 40px;
+  width: 70px;
+  border: none;
+  box-shadow: none;
+}
+
+.jq-number__spin {
+  display: none;
+}
+
+.jq-number__field input {
+  display: block;
+  text-align: center;
+  font-family: 'Rubic', sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  color: $dark;
+}
+
+.irs-handle.to{
+  top: 5px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.irs-handle.from {
+  top: 23px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

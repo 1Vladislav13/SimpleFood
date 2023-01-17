@@ -20,6 +20,7 @@
   &__img {
     margin-bottom: 15px;
     object-fit: fill;
+    border-radius: 10px 10px 0 0;
   }
 
   &__subtitle {
@@ -37,6 +38,11 @@
     align-items: center;
   }
 
+  &__time {
+    display: flex;
+    align-items: center;
+  }
+
   &__hours {
     font-weight: 300;
     font-size: 18px;
@@ -44,7 +50,7 @@
     display: flex;
     align-items: center;
 
-    &::before {
+    &:first-child::before {
       content: "";
       display: block;
       margin-right: 10px;

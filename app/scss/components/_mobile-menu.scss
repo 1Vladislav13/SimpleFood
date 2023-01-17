@@ -3,7 +3,7 @@
 
   @include laptop {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     padding-top: 25px;
@@ -11,7 +11,7 @@
     height: 200vh;
     background-color: $white;
     transform: translateX(-200%);
-    z-index: 2;
+    z-index: 20;
     transition: transform ease 0.5s;
   }
 
@@ -35,58 +35,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-  }
-
-  &__btn {
-    margin-right: 16px;
-    width: 44px;
-    height: 44px;
-    position: relative;
-    transition: box-shadow 0.3s, opacity 0.3s;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 26%;
-      width: 20px;
-      height: 2px;
-      background-color: $darkBlue-900;
-      transform: rotate(45deg);
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: $accent;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 26%;
-      width: 20px;
-      height: 2px;
-      background-color: $darkBlue-900;
-      transform: rotate(-45deg);
-      transition: background-color 0.3s;
-    }
-
-    &:hover {
-
-      &::before,
-      &::after {
-        background-color: $accent;
-      }
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      border-radius: 5px;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
 
   }
 

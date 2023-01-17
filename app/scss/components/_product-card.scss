@@ -76,9 +76,14 @@
   &__img {
     margin: 0 auto;
     object-fit: contain;
+
+    @include mobile {
+      padding: 0 10px;
+    }
   }
 
   &__name {
+    text-align: center;
     flex-basis: 35px;
     margin: 0 10px 10px;
     font-weight: 400;
