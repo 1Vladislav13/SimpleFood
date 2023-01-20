@@ -28,10 +28,6 @@
     line-height: 120%;
     transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
 
-    &.current {
-      color: $accent;
-    }
-
     &:focus {
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
       border-radius: 5px;

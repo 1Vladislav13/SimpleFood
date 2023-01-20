@@ -1,4 +1,4 @@
-//select
+//select catalog
 
 .jq-selectbox__select {
   padding: 15px;
@@ -29,7 +29,6 @@
 .jq-selectbox li.selected {
   background-color: $white;
   padding: 5px 15px;
-  font-family: 'Rubic', sans-serif;
   font-size: 14px;
   border: 1px solid $gray;
   cursor: pointer;
@@ -78,10 +77,6 @@
   }
 }
 
-.jq-selectbox__trigger-arrow {
-  border: none;
-}
-
 .jq-selectbox li.selected {
   background-color: $white;
   color: $accent;
@@ -89,54 +84,138 @@
 
 
 
-//input
+//input catalog
 
-.jq-number__field {
-  height: 40px;
-  width: 70px;
-  border: none;
-  box-shadow: none;
-}
+.filter__box {
 
-.jq-number__spin {
-  display: none;
-}
+  .jq-number__field {
+    height: 40px;
+    width: 70px;
+    border: none;
+    box-shadow: none;
+  }
 
-.jq-number__field input {
-  display: block;
-  text-align: center;
-  font-family: 'Rubic', sans-serif;
-  font-size: 16px;
-  line-height: 100%;
-  color: $dark;
-}
+  .jq-number__spin {
+    display: none;
+  }
 
-.irs-handle.to{
-  top: 5px;
-  position: relative;
+  .jq-number__field input {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 100%;
+    color: $dark;
+  }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .irs-handle.to {
+    top: 5px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .irs-handle.from {
+    top: 23px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
-.irs-handle.from {
-  top: 23px;
-  position: relative;
+// input product
 
-  &::after {
-    content: "";
+.product {
+
+  .jq-number {
+    position: relative;
+    padding: 0 44px;
+  }
+
+  .jq-number__spin {
     position: absolute;
+    cursor: pointer;
+    top: 0;
+    background-color: $accent;
     width: 44px;
     height: 44px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: rotate(270deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      border: none;
+      top: 21px;
+      left: 11px;
+      transform: rotate(90deg);
+      background-color: $white;
+      transition: ease background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+    }
+
+    &:hover {
+      background-color: $accent-600;
+    }
+
+    &:focus {
+      background-color: $accent-600;
+      box-shadow: 0 0 0 1px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
+
+  .jq-number__spin.plus {
+    border-radius: 0 0 3px 3px;
+    right: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      left: 11px;
+      top: 21px;
+      background-color: $white;
+    }
+  }
+
+  .jq-number__spin.minus {
+    border-radius: 3px 3px 0 0;
+    left: 0;
+  }
+
+  .jq-number__field {
+    height: 44px;
+    width: 70px;
+  }
+
+  .jq-number__field input {
+    text-align: center;
+    background-color: #FAEDED;
+    width: 100%;
+    padding: 10px 17px;
+    font-size: 20px;
+    line-height: 100%;
+    color: $darkBlue-900;
+  }
+
 }

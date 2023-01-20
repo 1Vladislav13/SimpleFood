@@ -1,0 +1,127 @@
+.form {
+
+  &__title {
+    margin-bottom: 30px;
+    color: $darkBlue-900;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  &__star {
+    display: inline-block;
+
+    @include tablet {
+      padding: 15px 0;
+    }
+  }
+
+  &__rating,
+  &__comment,
+  &__name,
+  &__email {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__input-text {
+    font-size: 18px;
+    line-height: 135%;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    resize: vertical;
+    min-height: 165px;
+    max-height: 300px;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding: 18px;
+    transition: ease box-shadow 0.3s;
+
+    &::placeholder {
+      color: #c1c1c1;
+      font-size: 16px;
+      line-height: 130%;
+      transition: ease color 0.3s;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+  }
+
+  &__input-name,
+  &__input-email {
+    margin-top: 15px;
+    padding: 18px;
+    height: 54px;
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    transition: ease box-shadow 0.3s;
+
+    &::placeholder {
+      color: #c1c1c1;
+      font-size: 16px;
+      line-height: 130%;
+      transition: ease color 0.3s;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+  }
+
+  &__check {
+    cursor: pointer;
+    margin-bottom: 30px;
+    max-width: 430px;
+    font-size: 18px;
+    line-height: 130%;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__input-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+
+    &:checked+.form__input-check {
+      fill: $darkBlue-900;
+    }
+
+    &:focus+.form__input-check {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover+.form__input-check {
+      background-color: #FAEDED;
+    }
+  }
+
+  &__input-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 24px;
+    height: 24px;
+    width: 100%;
+    border: 1px solid #C2C2C2;
+    fill: transparent;
+    transition: ease background-color 0.3s, box-shadow 0.3s, fill 0.3s;
+  }
+
+
+
+}
