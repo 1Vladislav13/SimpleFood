@@ -143,24 +143,21 @@
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="catalog.html">
+          <span class="breadcrumbs__link">
             Каталог товаров
-          </a>
+          </span>
         </li>
       </ul>
     </div>
   </div>
 
   <main>
-    <h1 class="sr-only">
-      страница-каталог сервиса доставки еды Симпл фуд
-    </h1>
     <section class="catalog section">
       <div class="container">
         <div class="catalog__top">
-          <h2 class="catalog__title title">
+          <h1 class="catalog__title title">
             Каталог продуктов
-          </h2>
+          </h1>
           <div class="catalog__sort">
             <button class="catalog__filter-btn" type="button">
               <svg class="catalog__filter-icon" width="32" height="32">
@@ -168,28 +165,31 @@
               </svg>
               <span class="sr-only">открыть фильтр</span>
             </button>
-            <label class="catalog__label">
-              <select class="catalog__select">
-                <option value="">По названию</option>
-                <option value="">По цене (от большей)</option>
-                <option value="">По цене (от меньшей)</option>
-                <option value="">Последнее</option>
-                <option value="">Популярное</option>
-              </select>
-            </label>
-            <label class="catalog__label">
-              <select class="catalog__select">
-                <option value="">По 12</option>
-                <option value="">По 10</option>
-                <option value="">По 8</option>
-                <option value="">По 6</option>
-              </select>
-            </label>
+            <form class="catalog__form">
+              <label class="catalog__label">
+                <select class="catalog__select">
+                  <option value="">По названию</option>
+                  <option value="">По цене (от большей)</option>
+                  <option value="">По цене (от меньшей)</option>
+                  <option value="">Последнее</option>
+                  <option value="">Популярное</option>
+                </select>
+              </label>
+              <label class="catalog__label">
+                <select class="catalog__select">
+                  <option value="">По 12</option>
+                  <option value="">По 10</option>
+                  <option value="">По 8</option>
+                  <option value="">По 6</option>
+                </select>
+              </label>
+            </form>
           </div>
         </div>
 
         <div class="catalog__wrapper">
           <div class="filter">
+            <h2 class="sr-only">фильтр</h2>
             <button class="close close__filter" type="button">
               <span class="sr-only">закрыть фильтр</span>
             </button>
@@ -225,62 +225,64 @@
 
             <div class="filter__box filter-offer">
               <h3 class="filter__title">Предложения</h3>
-              <ul class="filter__list">
-                <li class="filter__item">
-                  <label class="filter-offer__label" for="check1">
-                    <input class="filter-offer__input" type="checkbox" id="check1">
-                    <span class="filter-offer__checkbox">
-                      <svg class="filter-offer__icon">
-                        <use href="./images/symbol-defs.svg#icon-check"></use>
-                      </svg>
-                    </span>
-                    Со скидкой
-                  </label>
-                </li>
+              <form class="filter-offer__form">
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <label class="filter-offer__label">
+                      <input class="filter-offer__input" type="checkbox" id="check1">
+                      <span class="filter-offer__checkbox">
+                        <svg class="filter-offer__icon">
+                          <use href="./images/symbol-defs.svg#icon-check"></use>
+                        </svg>
+                      </span>
+                      Со скидкой
+                    </label>
+                  </li>
 
-                <li class="filter__item">
-                  <label class="filter-offer__label" for="check2">
-                    <input class="filter-offer__input" type="checkbox" id="check2" checked>
-                    <span class="filter-offer__checkbox">
-                      <svg class="filter-offer__icon">
-                        <use href="./images/symbol-defs.svg#icon-check"></use>
-                      </svg>
-                    </span>
-                    Новинка
-                  </label>
-                </li>
+                  <li class="filter__item">
+                    <label class="filter-offer__label">
+                      <input class="filter-offer__input" type="checkbox" id="check2" checked>
+                      <span class="filter-offer__checkbox">
+                        <svg class="filter-offer__icon">
+                          <use href="./images/symbol-defs.svg#icon-check"></use>
+                        </svg>
+                      </span>
+                      Новинка
+                    </label>
+                  </li>
 
-                <li class="filter__item">
-                  <label class="filter-offer__label" for="check3">
-                    <input class="filter-offer__input" type="checkbox" id="check3">
-                    <span class="filter-offer__checkbox">
-                      <svg class="filter-offer__icon">
-                        <use href="./images/symbol-defs.svg#icon-check"></use>
-                      </svg>
-                    </span>
-                    Хит
-                  </label>
-                </li>
-              </ul>
+                  <li class="filter__item">
+                    <label class="filter-offer__label">
+                      <input class="filter-offer__input" type="checkbox" id="check3">
+                      <span class="filter-offer__checkbox">
+                        <svg class="filter-offer__icon">
+                          <use href="./images/symbol-defs.svg#icon-check"></use>
+                        </svg>
+                      </span>
+                      Хит
+                    </label>
+                  </li>
+                </ul>
+              </form>
             </div>
 
             <div class="filter__box filter-price">
               <h3 class="filter__title">Цена</h3>
               <div class="filter-price__wrapper">
-                <div class="filter-price__inner">
+                <form class="filter-price__form">
                   <label class="filter-price__label">
                     от
                     <input class="filter-price__input-from filter-price__input" type="number" id="number_shipments"
                       min="0" max="1100" value="1" maxlength="4">
-                    ₴
+                    <span class="currency">₴</span>
                   </label>
                   <label class="filter-price__label">
                     от
                     <input class="filter-price__input-to filter-price__input" type="number" id="number_shipments"
                       min="0" max="1100" value="1" maxlength="4">
-                    ₴
+                    <span class="currency">₴</span>
                   </label>
-                </div>
+                </form>
                 <label class="filter-price__label-progress">
                   <input class="filter-price__input-progress" type="text" value="">
                 </label>
@@ -290,6 +292,7 @@
 
           </div>
           <div class="catalog__content">
+            <h2 class="sr-only">каталог продуктов</h2>
             <ul class="catalog__products">
               <li class="catalog__item">
                 <article class="product-card">
@@ -310,7 +313,7 @@
                 <article class="product-card">
                   <a class="product-card__link" href="#">
                     <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" width="140" height="140"
-                      alt="Бифproduct-бургер">
+                      alt="Биф-бургер">
                   </a>
                   <h3 class="product-card__name">Бифбургер</h3>
                   <span class="product-card__price">
@@ -370,7 +373,7 @@
                 <article class="product-card">
                   <a class="product-card__link" href="#">
                     <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" width="140" height="140"
-                      alt="Бифproduct-бургер">
+                      alt="Биф-бургер">
                   </a>
                   <h3 class="product-card__name">Бифбургер</h3>
                   <span class="product-card__price">
@@ -430,7 +433,7 @@
                 <article class="product-card">
                   <a class="product-card__link" href="#">
                     <img class="product-card__img" src="./images/burgers/bifbuerger.jpg" width="140" height="140"
-                      alt="Бифproduct-бургер">
+                      alt="Биф-бургер">
                   </a>
                   <h3 class="product-card__name">Бифбургер</h3>
                   <span class="product-card__price">

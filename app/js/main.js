@@ -28,6 +28,9 @@ $(function () {
   });
 
 
+  
+
+
 
   const mediaQuery = window.matchMedia('(max-width: 769px)')
 

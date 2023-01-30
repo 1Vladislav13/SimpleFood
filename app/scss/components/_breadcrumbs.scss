@@ -15,8 +15,6 @@
     align-items: center;
 
     &:not(:last-child) {
-      position: relative;
-
       &::after {
         content: "";
         display: block;
