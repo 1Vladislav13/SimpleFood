@@ -1,0 +1,140 @@
+.footer {
+
+  &__top {
+    display: flex;
+    margin-bottom: 66px;
+
+    @include desktop {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @include mobile {
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__box {
+    margin-right: 70px;
+  }
+
+  &__list {
+    max-width: 571px;
+    width: 100%;
+    margin-right: 70px;
+    display: grid;
+    grid-template-columns: 213px 152px 188px;
+    grid-auto-rows: 33px;
+    gap: 10px;
+
+    @include desktop {
+      order: 1;
+    }
+
+    @include tablet {
+      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      display: block;
+    }
+
+    @include laptop-landscape {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 130%;
+    transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+    }
+
+    &:hover {
+      color: $accent
+    }
+
+    @include tablet {
+      display: block;
+      padding: 10px 15px 10px 0;
+    }
+
+  }
+
+  &__text {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 150%;
+    border-top: 1px solid $silver-200;
+  }
+
+  .footer-form {
+
+    &__label {
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    &__field {
+      max-width: 200px;
+      width: 100%;
+      display: block;
+      margin-right: 0;
+      padding: 13px 15px;
+      border: 1px solid $silver-200;
+      border-radius: 5px;
+      font-size: 14px;
+      line-height: 130%;
+      transition: box-shadow 0.3s;
+
+      &::placeholder {
+        color: $gray;
+        transition: color 0.3s;
+      }
+
+      &:hover::placeholder {
+        color: $darkBlue-900;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      }
+
+      @include desktop {
+        min-width: 360px;
+      }
+
+      @include tablet {
+        min-width: 200px;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+    }
+
+    &__btn-icon {
+      margin-right: 15px;
+      fill: $white;
+      transition: fill 0.3s;
+    }
+  }
+}

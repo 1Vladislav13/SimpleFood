@@ -1,0 +1,119 @@
+.feauters {
+
+  &__container {
+    min-height: 585px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('../images/feauters-bg.png');
+    background-repeat: no-repeat;
+    background-position: 70px;
+    background-size: initial;
+    z-index: 0;
+    position: relative;
+
+    @include tablet {
+      background-size: contain;
+      background-position: 10px;
+      min-height: 462px;
+    }
+
+    @include desktop {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(249, 250, 255, 0.85);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__inner {
+    margin-right: 70px;
+    max-width: 470px;
+
+    @include tablet {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include tablet {
+        margin-bottom: 15px;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 30px;
+      max-width: 34px;
+      width: 100%;
+      height: 34px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        margin-right: 10px;
+      }
+    }
+
+    &--timer {
+      &::before {
+        background-image: url('../images/icon/timer.svg');
+      }
+    }
+
+    &--delivery {
+      &::before {
+        background-image: url('../images/icon/delivery.svg');
+      }
+    }
+
+    &--restaurant {
+      &::before {
+        background-image: url('../images/icon/restaurant.svg');
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+  }
+}

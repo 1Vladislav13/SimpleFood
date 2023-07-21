@@ -1,0 +1,140 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color: $dark;
+  background-color: $silver-100;
+  font-size: 20px;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.section {
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-bottom: 40px;
+  }
+}
+
+.title {
+  text-align: center;
+  color: $darkBlue-900;
+  font-size: 36px;
+  line-height: 130%;
+  font-weight: 500;
+
+  @include tablet {
+    font-size: 24px;
+  }
+}
+
+.logo {
+  transition: opacity 0.3s, box-shadow 0.3s;
+
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__img-header {
+
+    @include mobile {
+      width: 115px;
+      height: 23px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+  }
+}
+
+.current {
+  color: $accent;
+}
+
+.clicable {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.shadow {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    z-index: 19;
+    animation: ani 0.7s forwards;
+  }
+
+  @keyframes ani {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.hidden {
+  overflow: hidden;
+}

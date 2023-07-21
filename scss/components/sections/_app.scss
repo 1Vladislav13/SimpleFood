@@ -1,0 +1,94 @@
+.app {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop {
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: 540px;
+    margin-right: 60px;
+
+    @include laptop {
+      margin-bottom: 30px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__markets {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__link {
+    height: 40px;
+    border-radius: 8px;
+    transition: opacity 0.3s, box-shadow 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--appstore {
+      width: 120px;
+      background-image: url('../images/icon/apple.svg');
+    }
+
+    &--google {
+      background-image: url('../images/icon/googlePlay.svg');
+      width: 135px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+
+    @include laptop {
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

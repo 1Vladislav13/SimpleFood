@@ -1,0 +1,45 @@
+.interest {
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__product {
+    max-width: 210px;
+    width: 100%;
+    padding: 2px 2px;
+    margin: 0 auto;
+  }
+
+  @include mobile {
+    &__product-card {
+      margin-right: 5px;
+    }
+  }
+
+
+
+}

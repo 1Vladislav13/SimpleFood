@@ -1,0 +1,46 @@
+$dark: #31352b;
+$accent: #ff6838;
+$accent-900: #ff7a50;
+$accent-600:#ffae94;
+$darkBlue-900: #363853;
+$silver-100: #f9faff;
+$silver-200: #ececec;
+$gray: #c2c2c2;
+$white: #fff;
+$active:#fff2ed;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin desktop() {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin laptop-landscape() {
+  @media (max-width: $lg) and (orientation:landscape) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+

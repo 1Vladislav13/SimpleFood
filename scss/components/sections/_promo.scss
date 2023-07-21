@@ -1,0 +1,28 @@
+.promo {
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: left;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    border-radius: 10px;
+    transition: ease opacity 0.3s, box-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.catalog {
+
+  padding-top: 60px;
+
+  @include tablet {
+    padding-top: 40px;
+  }
+
+  &__top {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop {
+      display: block;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+
+    @include laptop {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include laptop {
+    &__sort {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__filter-btn {
+    display: none;
+
+    @include laptop {
+      padding: 6px;
+      background-color: #FAEDED;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: $accent;
+      transition: ease box-shadow 0.3s, opacity 0.3s;
+
+      &:hover {
+        box-shadow: 0 3px 15px rgb(255 104 56 / 50%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include laptop {
+      justify-content: center;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__select:focus+.jq-selectbox__select {
+    border-color: $accent;
+  }
+
+  &__products {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+
+    @include mobile {
+      &:nth-last-child(-n+6) {
+        display: none;
+      }
+    }
+  }
+}

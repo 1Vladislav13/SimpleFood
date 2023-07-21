@@ -1,0 +1,22 @@
+.fancybox__backdrop {
+  background-color: $white;
+}
+
+.carousel__button svg {
+  stroke: $darkBlue-900;
+  filter: none;
+}
+
+.carousel__dots .carousel__dot.is-selected:after {
+  background-color: $accent;
+}
+
+.carousel__dots .carousel__dot:after {
+  background-color: #C2C2C2;
+}
+
+@include tablet {
+  .fancybox__nav {
+    display: none;
+  }
+}

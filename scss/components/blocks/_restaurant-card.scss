@@ -1,0 +1,109 @@
+.restaurant-card {
+  width: 370px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  transition: box-shadow 0.3s;
+
+  @include tablet {
+    margin: 0 auto 30px;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 15px rgba(255, 104, 56, 0.5);
+  }
+
+  &__img {
+    margin-bottom: 15px;
+    object-fit: fill;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__subtitle {
+    flex-grow: 1;
+    margin: 0 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__box {
+    padding: 15px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+  }
+
+  &__hours {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 167%;
+    display: flex;
+    align-items: center;
+
+    &:first-child::before {
+      content: "";
+      display: block;
+      margin-right: 10px;
+      width: 22px;
+      height: 22px;
+      background-image: url('../images/icon/timerRestaurant.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79px;
+    height: 33px;
+    background-color: $accent;
+    border-radius: 20px;
+    transition: box-shadow 0.3s, background-color 0.3s;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+      .restaurant-card__link-icon {
+        transform: translateX(100%);
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      background-color: $active;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+
+      .restaurant-card__link-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      background-color: $active;
+
+      .restaurant__link-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__link-icon {
+    fill: $white;
+    transition: fill 0.3s, transform 0.3s;
+  }
+
+}
